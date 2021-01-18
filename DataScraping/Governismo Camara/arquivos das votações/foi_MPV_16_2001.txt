@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<proposicao>
+ <Sigla>
+  MPV
+ </Sigla>
+ <Numero>
+  16
+ </Numero>
+ <Ano>
+  2001
+ </Ano>
+ <Votacoes>
+  <Votacao Data="16/4/2002" Hora="17:20" ObjVotacao="MEDIDA PROVISÓRIA" Resumo="" codSessao="671">
+   <orientacaoBancada>
+    <bancada Sigla="PFL" orientacao="Sim            "/>
+    <bancada Sigla="PSDB" orientacao="Sim            "/>
+    <bancada Sigla="PMDB" orientacao="Sim            "/>
+    <bancada Sigla="PT" orientacao="Sim            "/>
+    <bancada Sigla="PPB" orientacao="Sim            "/>
+    <bancada Sigla="PTB" orientacao="Sim            "/>
+    <bancada Sigla="PDT/PPS" orientacao="Sim            "/>
+    <bancada Sigla="PL/PSL" orientacao="Não            "/>
+    <bancada Sigla="PSB/PCDOB" orientacao="Não            "/>
+    <bancada Sigla="GOV." orientacao="Sim            "/>
+   </orientacaoBancada>
+   <votos>
+    <Deputado Nome="Alceste Almeida" Partido="PL        " UF="RR" Voto="Sim            " ideCadastro="73979"/>
+    <Deputado Nome="Francisco Rodrigues" Partido="PFL       " UF="RR" Voto="-" ideCadastro="73981"/>
+    <Deputado Nome="Luciano Castro" Partido="PFL       " UF="RR" Voto="-" ideCadastro="73982"/>
+    <Deputado Nome="Luis Barbosa" Partido="PFL       " UF="RR" Voto="-" ideCadastro="73983"/>
+    <Deputado Nome="Robério Araújo" Partido="PL        " UF="RR" Voto="Sim            " ideCadastro="73985"/>
+    <Deputado Nome="Salomão Cruz" Partido="PFL       " UF="RR" Voto="Sim            " ideCadastro="73986"/>
+    <Deputado Nome="Antonio Feijão" Partido="PSDB      " UF="AP" Voto="-" ideCadastro="73987"/>
+    <Deputado Nome="Fátima Pelaes" Partido="PSDB      " UF="AP" Voto="-" ideCadastro="74065"/>
+    <Deputado Nome="Sérgio Barcellos" Partido="PFL       " UF="AP" Voto="Sim            " ideCadastro="74069"/>
+    <Deputado Nome="Anivaldo Vale" Partido="PSDB      " UF="PA" Voto="-" ideCadastro="74072"/>
+    <Deputado Nome="Elcione Barbalho" Partido="PMDB      " UF="PA" Voto="Sim            " ideCadastro="74075"/>
+    <Deputado Nome="Gerson Peres" Partido="PPB       " UF="PA" Voto="Sim            " ideCadastro="74076"/>
+    <Deputado Nome="Giovanni Queiroz" Partido="PDT       " UF="PA" Voto="-" ideCadastro="74077"/>
+    <Deputado Nome="José Priante" Partido="PMDB      " UF="PA" Voto="-" ideCadastro="74079"/>
+    <Deputado Nome="Nicias Ribeiro" Partido="PSDB      " UF="PA" Voto="-" ideCadastro="74080"/>
+    <Deputado Nome="Paulo Rocha" Partido="PT        " UF="PA" Voto="-" ideCadastro="74082"/>
+    <Deputado Nome="Raimundo Santos" Partido="PL        " UF="PA" Voto="-" ideCadastro="74084"/>
+    <Deputado Nome="Vic Pires Franco" Partido="PFL       " UF="PA" Voto="-" ideCadastro="74087"/>
+    <Deputado Nome="Arthur Virgílio" Partido="PSDB      " UF="AM" Voto="Sim            " ideCadastro="74089"/>
+    <Deputado Nome="Átila Lins" Partido="PFL       " UF="AM" Voto="Sim            " ideCadastro="74090"/>
+    <Deputado Nome="José Melo" Partido="PFL       " UF="AM" Voto="Sim            " ideCadastro="74093"/>
+    <Deputado Nome="Luiz Fernando" Partido="PPB       " UF="AM" Voto="-" ideCadastro="74094"/>
+    <Deputado Nome="Pauderney Avelino" Partido="PFL       " UF="AM" Voto="Sim            " ideCadastro="74095"/>
+    <Deputado Nome="Confúcio Moura" Partido="PMDB      " UF="RO" Voto="-" ideCadastro="74097"/>
+    <Deputado Nome="Eurípedes Miranda" Partido="PDT       " UF="RO" Voto="Sim            " ideCadastro="74099"/>
+    <Deputado Nome="Expedito Júnior" Partido="PSDB      " UF="RO" Voto="Sim            " ideCadastro="74100"/>
+    <Deputado Nome="Marinha Raupp" Partido="PMDB      " UF="RO" Voto="Sim            " ideCadastro="74177"/>
+    <Deputado Nome="Zila Bezerra" Partido="PTB       " UF="AC" Voto="-" ideCadastro="74185"/>
+    <Deputado Nome="Antônio Jorge" Partido="PTB       " UF="TO" Voto="Sim            " ideCadastro="74186"/>
+    <Deputado Nome="Darci Coelho" Partido="PFL       " UF="TO" Voto="Sim            " ideCadastro="74187"/>
+    <Deputado Nome="Freire Júnior" Partido="PMDB      " UF="TO" Voto="-" ideCadastro="74189"/>
+    <Deputado Nome="João Ribeiro" Partido="PFL       " UF="TO" Voto="Sim            " ideCadastro="74190"/>
+    <Deputado Nome="Osvaldo Reis" Partido="PMDB      " UF="TO" Voto="-" ideCadastro="74191"/>
+    <Deputado Nome="Paulo Mourão" Partido="PSDB      " UF="TO" Voto="-" ideCadastro="74192"/>
+    <Deputado Nome="Airton Cascavel" Partido="PPS       " UF="RR" Voto="Sim            " ideCadastro="74340"/>
+    <Deputado Nome="Cesar Bandeira" Partido="PFL       " UF="MA" Voto="Sim            " ideCadastro="74195"/>
+    <Deputado Nome="Eliseu Moura" Partido="PPB       " UF="MA" Voto="-" ideCadastro="74198"/>
+    <Deputado Nome="Francisco Coelho" Partido="PFL       " UF="MA" Voto="-" ideCadastro="74199"/>
+    <Deputado Nome="Almir Sá" Partido="PPB       " UF="RR" Voto="-" ideCadastro="74341"/>
+    <Deputado Nome="Gastão Vieira" Partido="PMDB      " UF="MA" Voto="Sim            " ideCadastro="74200"/>
+    <Deputado Nome="Badu Picanço" Partido="PL        " UF="AP" Voto="Sim            " ideCadastro="74342"/>
+    <Deputado Nome="Dr. Benedito Dias" Partido="PPB       " UF="AP" Voto="Sim            " ideCadastro="74343"/>
+    <Deputado Nome="Eduardo Seabra" Partido="PTB       " UF="AP" Voto="Sim            " ideCadastro="74344"/>
+    <Deputado Nome="Evandro Milhomen" Partido="PSB       " UF="AP" Voto="-" ideCadastro="74345"/>
+    <Deputado Nome="Jurandil Juarez" Partido="PMDB      " UF="AP" Voto="Sim            " ideCadastro="74346"/>
+    <Deputado Nome="Deusdeth Pantoja" Partido="PFL       " UF="PA" Voto="Sim            " ideCadastro="74347"/>
+    <Deputado Nome="Babá" Partido="PT        " UF="PA" Voto="-" ideCadastro="74349"/>
+    <Deputado Nome="Josué Bengtson" Partido="PTB       " UF="PA" Voto="-" ideCadastro="74351"/>
+    <Deputado Nome="Nilson Pinto" Partido="PSDB      " UF="PA" Voto="Sim            " ideCadastro="74352"/>
+    <Deputado Nome="Renildo Leal" Partido="PTB       " UF="PA" Voto="-" ideCadastro="74353"/>
+    <Deputado Nome="Zenaldo Coutinho" Partido="PSDB      " UF="PA" Voto="Sim            " ideCadastro="74354"/>
+    <Deputado Nome="Francisco Garcia" Partido="PFL       " UF="AM" Voto="-" ideCadastro="74355"/>
+    <Deputado Nome="Silas Câmara" Partido="PTB       " UF="AM" Voto="-" ideCadastro="74356"/>
+    <Deputado Nome="Vanessa Grazziotin" Partido="PCdoB     " UF="AM" Voto="-" ideCadastro="74357"/>
+    <Deputado Nome="Agnaldo Muniz" Partido="PPS       " UF="RO" Voto="Sim            " ideCadastro="74358"/>
+    <Deputado Nome="Nilton Capixaba" Partido="PTB       " UF="RO" Voto="-" ideCadastro="74359"/>
+    <Deputado Nome="Sérgio Carvalho" Partido="PSDB      " UF="RO" Voto="Sim            " ideCadastro="74360"/>
+    <Deputado Nome="Ildefonço Cordeiro" Partido="PSDB      " UF="AC" Voto="Sim            " ideCadastro="74362"/>
+    <Deputado Nome="Márcio Bittar" Partido="PPS       " UF="AC" Voto="Sim            " ideCadastro="74363"/>
+    <Deputado Nome="Marcos Afonso" Partido="PT        " UF="AC" Voto="-" ideCadastro="74364"/>
+    <Deputado Nome="Nilson Mourão" Partido="PT        " UF="AC" Voto="Sim            " ideCadastro="74365"/>
+    <Deputado Nome="Sérgio Barros" Partido="PSDB      " UF="AC" Voto="Sim            " ideCadastro="74442"/>
+    <Deputado Nome="Igor Avelino" Partido="PMDB      " UF="TO" Voto="Sim            " ideCadastro="74443"/>
+    <Deputado Nome="Pastor Amarildo" Partido="PPB       " UF="TO" Voto="-" ideCadastro="74444"/>
+    <Deputado Nome="João Castelo" Partido="PSDB      " UF="MA" Voto="Sim            " ideCadastro="74445"/>
+    <Deputado Nome="José Antonio Almeida" Partido="PSB       " UF="MA" Voto="Não            " ideCadastro="74446"/>
+    <Deputado Nome="Mauro Fecury" Partido="PFL       " UF="MA" Voto="Sim            " ideCadastro="74206"/>
+    <Deputado Nome="Nice Lobão" Partido="PFL       " UF="MA" Voto="Sim            " ideCadastro="74447"/>
+    <Deputado Nome="Paulo Marinho" Partido="PFL       " UF="MA" Voto="Sim            " ideCadastro="74448"/>
+    <Deputado Nome="Pedro Fernandes" Partido="PFL       " UF="MA" Voto="Sim            " ideCadastro="74449"/>
+    <Deputado Nome="Pedro Novais" Partido="PMDB      " UF="MA" Voto="Sim            " ideCadastro="74207"/>
+    <Deputado Nome="Remi Trinta" Partido="PL        " UF="MA" Voto="-" ideCadastro="74208"/>
+    <Deputado Nome="Roberto Rocha" Partido="PSDB      " UF="MA" Voto="-" ideCadastro="74209"/>
+    <Deputado Nome="Sarney Filho" Partido="PFL       " UF="MA" Voto="-" ideCadastro="74210"/>
+    <Deputado Nome="Sebastião Madeira" Partido="PSDB      " UF="MA" Voto="-" ideCadastro="74211"/>
+    <Deputado Nome="Adolfo Marinho" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74450"/>
+    <Deputado Nome="Almeida de Jesus" Partido="PL        " UF="CE" Voto="Não            " ideCadastro="74451"/>
+    <Deputado Nome="Antonio Cambraia" Partido="PSDB      " UF="CE" Voto="Sim            " ideCadastro="74452"/>
+    <Deputado Nome="Chiquinho Feitosa" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74453"/>
+    <Deputado Nome="Eunício Oliveira" Partido="PMDB      " UF="CE" Voto="-" ideCadastro="74454"/>
+    <Deputado Nome="Léo Alcântara" Partido="PSDB      " UF="CE" Voto="Sim            " ideCadastro="74455"/>
+    <Deputado Nome="Manoel Salviano" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74456"/>
+    <Deputado Nome="Moroni Torgan" Partido="PFL       " UF="CE" Voto="-" ideCadastro="74457"/>
+    <Deputado Nome="Sérgio Novais" Partido="PSB       " UF="CE" Voto="Não            " ideCadastro="74458"/>
+    <Deputado Nome="Átila Lira" Partido="PSDB      " UF="PI" Voto="Sim            " ideCadastro="74459"/>
+    <Deputado Nome="Marcelo Castro" Partido="PMDB      " UF="PI" Voto="Sim            " ideCadastro="74460"/>
+    <Deputado Nome="Themístocles Sampaio" Partido="PMDB      " UF="PI" Voto="Sim            " ideCadastro="74461"/>
+    <Deputado Nome="Wellington Dias" Partido="PT        " UF="PI" Voto="Sim            " ideCadastro="74462"/>
+    <Deputado Nome="Lavoisier Maia" Partido="PFL       " UF="RN" Voto="Sim            " ideCadastro="74463"/>
+    <Deputado Nome="Múcio Sá" Partido="PTB       " UF="RN" Voto="Sim            " ideCadastro="74464"/>
+    <Deputado Nome="Avenzoar Arruda" Partido="PT        " UF="PB" Voto="Sim            " ideCadastro="74465"/>
+    <Deputado Nome="Carlos Dunga" Partido="PTB       " UF="PB" Voto="Sim            " ideCadastro="74466"/>
+    <Deputado Nome="Damião Feliciano" Partido="PMDB      " UF="PB" Voto="-" ideCadastro="74467"/>
+    <Deputado Nome="Domiciano Cabral" Partido="PSDB      " UF="PB" Voto="-" ideCadastro="74468"/>
+    <Deputado Nome="Inaldo Leitão" Partido="PSDB      " UF="PB" Voto="-" ideCadastro="74469"/>
+    <Deputado Nome="Marcondes Gadelha" Partido="PFL       " UF="PB" Voto="Sim            " ideCadastro="74470"/>
+    <Deputado Nome="Armando Monteiro" Partido="PMDB      " UF="PE" Voto="Sim            " ideCadastro="74472"/>
+    <Deputado Nome="Carlos Batata" Partido="PSDB      " UF="PE" Voto="-" ideCadastro="74473"/>
+    <Deputado Nome="Clementino Coelho" Partido="PPS       " UF="PE" Voto="-" ideCadastro="74475"/>
+    <Deputado Nome="Djalma Paes" Partido="PSB       " UF="PE" Voto="Não            " ideCadastro="74476"/>
+    <Deputado Nome="Joaquim Francisco" Partido="PFL       " UF="PE" Voto="Sim            " ideCadastro="74477"/>
+    <Deputado Nome="Luciano Bivar" Partido="PSL       " UF="PE" Voto="-" ideCadastro="74478"/>
+    <Deputado Nome="Marcos de Jesus" Partido="PL        " UF="PE" Voto="-" ideCadastro="74479"/>
+    <Deputado Nome="Pedro Eugênio" Partido="PT        " UF="PE" Voto="Sim            " ideCadastro="74556"/>
+    <Deputado Nome="Ricardo Fiuza" Partido="PPB       " UF="PE" Voto="Sim            " ideCadastro="74557"/>
+    <Deputado Nome="Givaldo Carimbão" Partido="PSB       " UF="AL" Voto="-" ideCadastro="74558"/>
+    <Deputado Nome="João Caldas" Partido="PL        " UF="AL" Voto="Sim            " ideCadastro="74559"/>
+    <Deputado Nome="Regis Cavalcante" Partido="PPS       " UF="AL" Voto="Sim            " ideCadastro="74560"/>
+    <Deputado Nome="Augusto Franco" Partido="PSDB      " UF="SE" Voto="Sim            " ideCadastro="74561"/>
+    <Deputado Nome="Ivan Paixão" Partido="PPS       " UF="SE" Voto="Sim            " ideCadastro="74562"/>
+    <Deputado Nome="Jorge Alberto" Partido="PMDB      " UF="SE" Voto="Sim            " ideCadastro="74563"/>
+    <Deputado Nome="Sérgio Reis" Partido="PTB       " UF="SE" Voto="Sim            " ideCadastro="74564"/>
+    <Deputado Nome="Francistônio Pinto" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74565"/>
+    <Deputado Nome="Gerson Gabrielli" Partido="PFL       " UF="BA" Voto="-" ideCadastro="74567"/>
+    <Deputado Nome="Jonival Lucas Junior" Partido="PMDB      " UF="BA" Voto="Sim            " ideCadastro="74568"/>
+    <Deputado Nome="Jutahy Junior" Partido="PSDB      " UF="BA" Voto="Sim            " ideCadastro="74570"/>
+    <Deputado Nome="Nelson Pellegrino" Partido="PT        " UF="BA" Voto="-" ideCadastro="74571"/>
+    <Deputado Nome="Nilo Coelho" Partido="PSDB      " UF="BA" Voto="-" ideCadastro="74572"/>
+    <Deputado Nome="Paulo Braga" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74573"/>
+    <Deputado Nome="Paulo Magalhães" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74574"/>
+    <Deputado Nome="Saulo Pedrosa" Partido="PSDB      " UF="BA" Voto="Sim            " ideCadastro="74575"/>
+    <Deputado Nome="Waldir Pires" Partido="PT        " UF="BA" Voto="-" ideCadastro="74576"/>
+    <Deputado Nome="Cabo Júlio" Partido="PST       " UF="MG" Voto="-" ideCadastro="74577"/>
+    <Deputado Nome="Cleuber Carneiro" Partido="PFL       " UF="MG" Voto="Sim            " ideCadastro="74578"/>
+    <Deputado Nome="Custódio Mattos" Partido="PSDB      " UF="MG" Voto="-" ideCadastro="74579"/>
+    <Deputado Nome="Edmar Moreira" Partido="PPB       " UF="MG" Voto="Sim            " ideCadastro="74580"/>
+    <Deputado Nome="Gilmar Machado" Partido="PT        " UF="MG" Voto="Sim            " ideCadastro="74581"/>
+    <Deputado Nome="Glycon Terra Pinto" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74582"/>
+    <Deputado Nome="Hélio Costa" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74583"/>
+    <Deputado Nome="José Militão" Partido="PTB       " UF="MG" Voto="Sim            " ideCadastro="74584"/>
+    <Deputado Nome="Lincoln Portela" Partido="PSL       " UF="MG" Voto="-" ideCadastro="74585"/>
+    <Deputado Nome="Maria do Carmo Lara" Partido="PT        " UF="MG" Voto="Sim            " ideCadastro="74586"/>
+    <Deputado Nome="Maria Lúcia" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74587"/>
+    <Deputado Nome="Olimpio Pires" Partido="PDT       " UF="MG" Voto="Sim            " ideCadastro="74588"/>
+    <Deputado Nome="Pimenta da Veiga" Partido="PSDB      " UF="MG" Voto="-" ideCadastro="74589"/>
+    <Deputado Nome="Rafael Guerra" Partido="PSDB      " UF="MG" Voto="Sim            " ideCadastro="74590"/>
+    <Deputado Nome="Romeu Queiroz" Partido="PTB       " UF="MG" Voto="-" ideCadastro="74591"/>
+    <Deputado Nome="Ronaldo Vasconcellos" Partido="PL        " UF="MG" Voto="-" ideCadastro="74592"/>
+    <Deputado Nome="Virgílio Guimarães" Partido="PT        " UF="MG" Voto="Sim            " ideCadastro="74593"/>
+    <Deputado Nome="Walfrido Mares Guia" Partido="PTB       " UF="MG" Voto="-" ideCadastro="74668"/>
+    <Deputado Nome="Zezé Perrella" Partido="PFL       " UF="MG" Voto="Sim            " ideCadastro="74669"/>
+    <Deputado Nome="José Carlos Fonseca Jr." Partido="PFL       " UF="ES" Voto="Sim            " ideCadastro="74670"/>
+    <Deputado Nome="José Carlos Elias" Partido="PTB       " UF="ES" Voto="Sim            " ideCadastro="74671"/>
+    <Deputado Nome="Magno Malta" Partido="PL        " UF="ES" Voto="-" ideCadastro="74672"/>
+    <Deputado Nome="Max Mauro" Partido="PTB       " UF="ES" Voto="Sim            " ideCadastro="74673"/>
+    <Deputado Nome="Ricardo Ferraço" Partido="PPS       " UF="ES" Voto="Sim            " ideCadastro="74674"/>
+    <Deputado Nome="Almerinda de Carvalho" Partido="PPB       " UF="RJ" Voto="Sim            " ideCadastro="74675"/>
+    <Deputado Nome="Bispo Rodrigues" Partido="PL        " UF="RJ" Voto="Não            " ideCadastro="74676"/>
+    <Deputado Nome="Cornélio Ribeiro" Partido="PL        " UF="RJ" Voto="Não            " ideCadastro="74677"/>
+    <Deputado Nome="Dino Fernandes" Partido="PPB       " UF="RJ" Voto="Sim            " ideCadastro="74679"/>
+    <Deputado Nome="Dr. Heleno" Partido="PSDB      " UF="RJ" Voto="-" ideCadastro="74680"/>
+    <Deputado Nome="Luiz Ribeiro" Partido="PSDB      " UF="RJ" Voto="-" ideCadastro="74681"/>
+    <Deputado Nome="Eber Silva" Partido="PST       " UF="RJ" Voto="-" ideCadastro="74682"/>
+    <Deputado Nome="Eduardo Paes" Partido="PFL       " UF="RJ" Voto="-" ideCadastro="74683"/>
+    <Deputado Nome="Iédio Rosa" Partido="PFL       " UF="RJ" Voto="Não            " ideCadastro="74684"/>
+    <Deputado Nome="João Sampaio" Partido="PDT       " UF="RJ" Voto="Sim            " ideCadastro="74685"/>
+    <Deputado Nome="Jorge Bittar" Partido="PT        " UF="RJ" Voto="Sim            " ideCadastro="74686"/>
+    <Deputado Nome="Luisinho" Partido="PPB       " UF="RJ" Voto="Sim            " ideCadastro="74687"/>
+    <Deputado Nome="Luiz Sérgio" Partido="PT        " UF="RJ" Voto="Sim            " ideCadastro="74688"/>
+    <Deputado Nome="Mattos Nascimento" Partido="PST       " UF="RJ" Voto="Sim            " ideCadastro="74689"/>
+    <Deputado Nome="Miriam Reid" Partido="PSB       " UF="RJ" Voto="-" ideCadastro="74690"/>
+    <Deputado Nome="Valdeci Paiva" Partido="PSL       " UF="RJ" Voto="Sim            " ideCadastro="74691"/>
+    <Deputado Nome="Paulo Baltazar" Partido="PSB       " UF="RJ" Voto="Não            " ideCadastro="74692"/>
+    <Deputado Nome="Rodrigo Maia" Partido="PFL       " UF="RJ" Voto="Não            " ideCadastro="74693"/>
+    <Deputado Nome="Vivaldo Barbosa" Partido="PDT       " UF="RJ" Voto="-" ideCadastro="74694"/>
+    <Deputado Nome="Wanderley Martins" Partido="PSB       " UF="RJ" Voto="-" ideCadastro="74695"/>
+    <Deputado Nome="Aloizio Mercadante" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="74697"/>
+    <Deputado Nome="André Benassi" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="74698"/>
+    <Deputado Nome="Angela Guadagnin" Partido="PT        " UF="SP" Voto="-" ideCadastro="74699"/>
+    <Deputado Nome="Luiz Antonio Fleury" Partido="PTB       " UF="SP" Voto="-" ideCadastro="74700"/>
+    <Deputado Nome="Bispo Wanderval" Partido="PL        " UF="SP" Voto="Não            " ideCadastro="74702"/>
+    <Deputado Nome="Emerson Kapaz" Partido="PPS       " UF="SP" Voto="Sim            " ideCadastro="74704"/>
+    <Deputado Nome="Dr. Evilásio" Partido="PSB       " UF="SP" Voto="Não            " ideCadastro="74705"/>
+    <Deputado Nome="Gilberto Kassab" Partido="PFL       " UF="SP" Voto="Sim            " ideCadastro="74778"/>
+    <Deputado Nome="Dr. Hélio" Partido="PDT       " UF="SP" Voto="Sim            " ideCadastro="74779"/>
+    <Deputado Nome="Iara Bernardi" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="74780"/>
+    <Deputado Nome="João Herrmann Neto" Partido="PPS       " UF="SP" Voto="-" ideCadastro="74781"/>
+    <Deputado Nome="José Dirceu" Partido="PT        " UF="SP" Voto="-" ideCadastro="74782"/>
+    <Deputado Nome="Julio Semeghini" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="74783"/>
+    <Deputado Nome="Luiza Erundina" Partido="PSB       " UF="SP" Voto="Sim            " ideCadastro="74784"/>
+    <Deputado Nome="Marcos Cintra" Partido="PFL       " UF="SP" Voto="Sim            " ideCadastro="74785"/>
+    <Deputado Nome="Medeiros" Partido="PL        " UF="SP" Voto="Não            " ideCadastro="74786"/>
+    <Deputado Nome="Milton Monti" Partido="PMDB      " UF="SP" Voto="-" ideCadastro="74787"/>
+    <Deputado Nome="Moreira Ferreira" Partido="PFL       " UF="SP" Voto="-" ideCadastro="74788"/>
+    <Deputado Nome="Nelo Rodolfo" Partido="PMDB      " UF="SP" Voto="Sim            " ideCadastro="74789"/>
+    <Deputado Nome="Neuton Lima" Partido="PFL       " UF="SP" Voto="Sim            " ideCadastro="74790"/>
+    <Deputado Nome="Paulo Kobayashi" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="74791"/>
+    <Deputado Nome="Professor Luizinho" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="74792"/>
+    <Deputado Nome="Ricardo Berzoini" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="74793"/>
+    <Deputado Nome="José Roberto Batochio" Partido="PDT       " UF="SP" Voto="-" ideCadastro="74794"/>
+    <Deputado Nome="Rubens Furlan" Partido="PPS       " UF="SP" Voto="Não            " ideCadastro="74795"/>
+    <Deputado Nome="Sampaio Dória" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="74796"/>
+    <Deputado Nome="Xico Graziano" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="74797"/>
+    <Deputado Nome="Zé Índio" Partido="PMDB      " UF="SP" Voto="Sim            " ideCadastro="74798"/>
+    <Deputado Nome="Celcita Pinheiro" Partido="PFL       " UF="MT" Voto="Sim            " ideCadastro="74799"/>
+    <Deputado Nome="Lino Rossi" Partido="PSDB      " UF="MT" Voto="Sim            " ideCadastro="74800"/>
+    <Deputado Nome="Wilson Santos" Partido="PSDB      " UF="MT" Voto="Sim            " ideCadastro="74801"/>
+    <Deputado Nome="Geraldo Magela" Partido="PT        " UF="DF" Voto="Sim            " ideCadastro="74802"/>
+    <Deputado Nome="Maria Abadia" Partido="PSDB      " UF="DF" Voto="Sim            " ideCadastro="74803"/>
+    <Deputado Nome="Paulo Octávio" Partido="PFL       " UF="DF" Voto="-" ideCadastro="74804"/>
+    <Deputado Nome="Pedro Celso" Partido="PT        " UF="DF" Voto="Sim            " ideCadastro="74805"/>
+    <Deputado Nome="Tadeu Filippelli" Partido="PMDB      " UF="DF" Voto="Sim            " ideCadastro="74806"/>
+    <Deputado Nome="Euler Morais" Partido="PMDB      " UF="GO" Voto="Sim            " ideCadastro="74807"/>
+    <Deputado Nome="Geovan Freitas" Partido="PMDB      " UF="GO" Voto="Sim            " ideCadastro="74808"/>
+    <Deputado Nome="Juquinha" Partido="PL        " UF="GO" Voto="Sim            " ideCadastro="74809"/>
+    <Deputado Nome="Lúcia Vânia" Partido="PSDB      " UF="GO" Voto="-" ideCadastro="65498"/>
+    <Deputado Nome="Luiz Bittencourt" Partido="PMDB      " UF="GO" Voto="-" ideCadastro="74810"/>
+    <Deputado Nome="Norberto Teixeira" Partido="PMDB      " UF="GO" Voto="-" ideCadastro="74811"/>
+    <Deputado Nome="Pedro Chaves" Partido="PMDB      " UF="GO" Voto="-" ideCadastro="74812"/>
+    <Deputado Nome="Ronaldo Caiado" Partido="PFL       " UF="GO" Voto="Sim            " ideCadastro="74813"/>
+    <Deputado Nome="Ben-Hur Ferreira" Partido="PT        " UF="MS" Voto="-" ideCadastro="74814"/>
+    <Deputado Nome="João Grandão" Partido="PT        " UF="MS" Voto="Sim            " ideCadastro="73454"/>
+    <Deputado Nome="Pedro Pedrossian" Partido="PPB       " UF="MS" Voto="-" ideCadastro="73455"/>
+    <Deputado Nome="Waldemir Moka" Partido="PMDB      " UF="MS" Voto="Sim            " ideCadastro="73456"/>
+    <Deputado Nome="Airton Roveda" Partido="PTB       " UF="PR" Voto="Sim            " ideCadastro="73457"/>
+    <Deputado Nome="Alex Canziani" Partido="PSDB      " UF="PR" Voto="Sim            " ideCadastro="73458"/>
+    <Deputado Nome="Dr. Rosinha" Partido="PT        " UF="PR" Voto="-" ideCadastro="73459"/>
+    <Deputado Nome="Gustavo Fruet" Partido="PMDB      " UF="PR" Voto="Sim            " ideCadastro="73460"/>
+    <Deputado Nome="Iris Simões" Partido="PTB       " UF="PR" Voto="Sim            " ideCadastro="73461"/>
+    <Deputado Nome="José Carlos Martinez" Partido="PTB       " UF="PR" Voto="Sim            " ideCadastro="73462"/>
+    <Deputado Nome="Márcio Matos" Partido="PTB       " UF="PR" Voto="Sim            " ideCadastro="74333"/>
+    <Deputado Nome="Osmar Serraglio" Partido="PMDB      " UF="PR" Voto="Sim            " ideCadastro="73463"/>
+    <Deputado Nome="Oliveira Filho" Partido="PL        " UF="PR" Voto="-" ideCadastro="73464"/>
+    <Deputado Nome="Rafael Greca" Partido="PFL       " UF="PR" Voto="Sim            " ideCadastro="73465"/>
+    <Deputado Nome="Rubens Bueno" Partido="PPS       " UF="PR" Voto="-" ideCadastro="73466"/>
+    <Deputado Nome="Santos Filho" Partido="PFL       " UF="PR" Voto="Sim            " ideCadastro="73467"/>
+    <Deputado Nome="Antônio Carlos Konder Reis" Partido="PFL       " UF="SC" Voto="Sim            " ideCadastro="73468"/>
+    <Deputado Nome="Carlito Merss" Partido="PT        " UF="SC" Voto="Sim            " ideCadastro="73469"/>
+    <Deputado Nome="Eni Voltolini" Partido="PPB       " UF="SC" Voto="Sim            " ideCadastro="73470"/>
+    <Deputado Nome="Fernando Coruja" Partido="PDT       " UF="SC" Voto="Sim            " ideCadastro="73471"/>
+    <Deputado Nome="Gervásio Silva" Partido="PFL       " UF="SC" Voto="-" ideCadastro="73472"/>
+    <Deputado Nome="Leodegar Tiscoski" Partido="PPB       " UF="SC" Voto="Sim            " ideCadastro="73473"/>
+    <Deputado Nome="Luci Choinacki" Partido="PT        " UF="SC" Voto="Sim            " ideCadastro="73474"/>
+    <Deputado Nome="Renato Vianna" Partido="PMDB      " UF="SC" Voto="Sim            " ideCadastro="73475"/>
+    <Deputado Nome="Vicente Caropreso" Partido="PSDB      " UF="SC" Voto="-" ideCadastro="73476"/>
+    <Deputado Nome="Alceu Collares" Partido="PDT       " UF="RS" Voto="Sim            " ideCadastro="73477"/>
+    <Deputado Nome="Beto Albuquerque" Partido="PSB       " UF="RS" Voto="Não            " ideCadastro="73478"/>
+    <Deputado Nome="Cezar Schirmer" Partido="PMDB      " UF="RS" Voto="-" ideCadastro="73480"/>
+    <Deputado Nome="Henrique Fontana" Partido="PT        " UF="RS" Voto="Sim            " ideCadastro="73482"/>
+    <Deputado Nome="Luis Carlos Heinze" Partido="PPB       " UF="RS" Voto="-" ideCadastro="73483"/>
+    <Deputado Nome="Marcos Rolim" Partido="PT        " UF="RS" Voto="-" ideCadastro="73484"/>
+    <Deputado Nome="Paulo José Gouvêa" Partido="PL        " UF="RS" Voto="Não            " ideCadastro="73485"/>
+    <Deputado Nome="Pompeo de Mattos" Partido="PDT       " UF="RS" Voto="Sim            " ideCadastro="73486"/>
+    <Deputado Nome="Roberto Argenta" Partido="PHS       " UF="RS" Voto="-" ideCadastro="73487"/>
+    <Deputado Nome="Aníbal Gomes" Partido="PMDB      " UF="CE" Voto="Sim            " ideCadastro="74212"/>
+    <Deputado Nome="Arnon Bezerra" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74291"/>
+    <Deputado Nome="Inácio Arruda" Partido="PCdoB     " UF="CE" Voto="-" ideCadastro="74295"/>
+    <Deputado Nome="José Linhares" Partido="PPB       " UF="CE" Voto="-" ideCadastro="74297"/>
+    <Deputado Nome="José Pimentel" Partido="PT        " UF="CE" Voto="Sim            " ideCadastro="74298"/>
+    <Deputado Nome="Marcelo Teixeira" Partido="PMDB      " UF="CE" Voto="-" ideCadastro="74300"/>
+    <Deputado Nome="Pinheiro Landim" Partido="PMDB      " UF="CE" Voto="Sim            " ideCadastro="74304"/>
+    <Deputado Nome="Roberto Pessoa" Partido="PFL       " UF="CE" Voto="Sim            " ideCadastro="74305"/>
+    <Deputado Nome="Rommel Feijó" Partido="PSDB      " UF="CE" Voto="Sim            " ideCadastro="74306"/>
+    <Deputado Nome="Vicente Arruda" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74308"/>
+    <Deputado Nome="B. Sá" Partido="PSDB      " UF="PI" Voto="Sim            " ideCadastro="74312"/>
+    <Deputado Nome="Ciro Nogueira" Partido="PFL       " UF="PI" Voto="Sim            " ideCadastro="74313"/>
+    <Deputado Nome="Heráclito Fortes" Partido="PFL       " UF="PI" Voto="Sim            " ideCadastro="74315"/>
+    <Deputado Nome="Mussa Demes" Partido="PFL       " UF="PI" Voto="Sim            " ideCadastro="74318"/>
+    <Deputado Nome="Paes Landim" Partido="PFL       " UF="PI" Voto="Sim            " ideCadastro="74319"/>
+    <Deputado Nome="Carlos Alberto Rosado" Partido="PFL       " UF="RN" Voto="Sim            " ideCadastro="74321"/>
+    <Deputado Nome="Henrique Eduardo Alves" Partido="PMDB      " UF="RN" Voto="-" ideCadastro="74324"/>
+    <Deputado Nome="Iberê Ferreira" Partido="PTB       " UF="RN" Voto="Sim            " ideCadastro="74325"/>
+    <Deputado Nome="Laíre Rosado" Partido="PMDB      " UF="RN" Voto="Sim            " ideCadastro="74326"/>
+    <Deputado Nome="Ney Lopes" Partido="PFL       " UF="RN" Voto="Sim            " ideCadastro="74327"/>
+    <Deputado Nome="Adauto Pereira" Partido="PFL       " UF="PB" Voto="Sim            " ideCadastro="74328"/>
+    <Deputado Nome="Armando Abílio" Partido="PSDB      " UF="PB" Voto="Sim            " ideCadastro="74405"/>
+    <Deputado Nome="Efraim Morais" Partido="PFL       " UF="PB" Voto="Sim            " ideCadastro="74407"/>
+    <Deputado Nome="Enivaldo Ribeiro" Partido="PPB       " UF="PB" Voto="Sim            " ideCadastro="74408"/>
+    <Deputado Nome="Wilson Braga" Partido="PFL       " UF="PB" Voto="-" ideCadastro="74414"/>
+    <Deputado Nome="Eduardo Campos" Partido="PSB       " UF="PE" Voto="Não            " ideCadastro="74416"/>
+    <Deputado Nome="Fernando Ferro" Partido="PT        " UF="PE" Voto="Sim            " ideCadastro="74417"/>
+    <Deputado Nome="Gonzaga Patriota" Partido="PSB       " UF="PE" Voto="-" ideCadastro="74419"/>
+    <Deputado Nome="Inocêncio Oliveira" Partido="PFL       " UF="PE" Voto="Sim            " ideCadastro="74421"/>
+    <Deputado Nome="João Colaço" Partido="PSDB      " UF="PE" Voto="-" ideCadastro="74422"/>
+    <Deputado Nome="José Chaves" Partido="PMDB      " UF="PE" Voto="-" ideCadastro="74423"/>
+    <Deputado Nome="José Mendonça Bezerra" Partido="PFL       " UF="PE" Voto="Sim            " ideCadastro="74425"/>
+    <Deputado Nome="José Múcio Monteiro" Partido="PSDB      " UF="PE" Voto="Sim            " ideCadastro="74426"/>
+    <Deputado Nome="Luiz Piauhylino" Partido="PSDB      " UF="PE" Voto="Sim            " ideCadastro="74427"/>
+    <Deputado Nome="Osvaldo Coelho" Partido="PFL       " UF="PE" Voto="Sim            " ideCadastro="74430"/>
+    <Deputado Nome="Salatiel Carvalho" Partido="PMDB      " UF="PE" Voto="-" ideCadastro="74434"/>
+    <Deputado Nome="Sérgio Guerra" Partido="PSDB      " UF="PE" Voto="Sim            " ideCadastro="74435"/>
+    <Deputado Nome="Severino Cavalcanti" Partido="PPB       " UF="PE" Voto="-" ideCadastro="74436"/>
+    <Deputado Nome="Augusto Farias" Partido="PPB       " UF="AL" Voto="Sim            " ideCadastro="74441"/>
+    <Deputado Nome="José Thomaz Nonô" Partido="PFL       " UF="AL" Voto="-" ideCadastro="74520"/>
+    <Deputado Nome="Cleonâncio Fonseca" Partido="PPB       " UF="SE" Voto="-" ideCadastro="74527"/>
+    <Deputado Nome="José Teles" Partido="PSDB      " UF="SE" Voto="Sim            " ideCadastro="74529"/>
+    <Deputado Nome="Aroldo Cedraz" Partido="PFL       " UF="BA" Voto="-" ideCadastro="74534"/>
+    <Deputado Nome="Benito Gama" Partido="PMDB      " UF="BA" Voto="Sim            " ideCadastro="74535"/>
+    <Deputado Nome="Claudio Cajado" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74537"/>
+    <Deputado Nome="Coriolano Sales" Partido="PMDB      " UF="BA" Voto="Sim            " ideCadastro="74538"/>
+    <Deputado Nome="Eraldo Tinoco" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74540"/>
+    <Deputado Nome="Eujácio Simões" Partido="PL        " UF="BA" Voto="-" ideCadastro="74541"/>
+    <Deputado Nome="Félix Mendonça" Partido="PTB       " UF="BA" Voto="Sim            " ideCadastro="74542"/>
+    <Deputado Nome="Geddel Vieira Lima" Partido="PMDB      " UF="BA" Voto="-" ideCadastro="74544"/>
+    <Deputado Nome="Haroldo Lima" Partido="PCdoB     " UF="BA" Voto="Não            " ideCadastro="74545"/>
+    <Deputado Nome="Jairo Carneiro" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74547"/>
+    <Deputado Nome="Jaques Wagner" Partido="PT        " UF="BA" Voto="-" ideCadastro="74548"/>
+    <Deputado Nome="João Almeida" Partido="PSDB      " UF="BA" Voto="Sim            " ideCadastro="74549"/>
+    <Deputado Nome="João Leão" Partido="PPB       " UF="BA" Voto="Sim            " ideCadastro="74550"/>
+    <Deputado Nome="Jorge Khoury" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74552"/>
+    <Deputado Nome="José Carlos Aleluia" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74553"/>
+    <Deputado Nome="José Rocha" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74554"/>
+    <Deputado Nome="Leur Lomanto" Partido="PMDB      " UF="BA" Voto="Sim            " ideCadastro="74555"/>
+    <Deputado Nome="Luiz Moreira" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74632"/>
+    <Deputado Nome="Mário Negromonte" Partido="PPB       " UF="BA" Voto="-" ideCadastro="74635"/>
+    <Deputado Nome="Pedro Irujo" Partido="PFL       " UF="BA" Voto="-" ideCadastro="74637"/>
+    <Deputado Nome="Roland Lavigne" Partido="PMDB      " UF="BA" Voto="Sim            " ideCadastro="74640"/>
+    <Deputado Nome="Ursicino Queiroz" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74644"/>
+    <Deputado Nome="Aécio Neves" Partido="PSDB      " UF="MG" Voto="Art. 17        " ideCadastro="74646"/>
+    <Deputado Nome="Antônio do Valle" Partido="PMDB      " UF="MG" Voto="Sim            " ideCadastro="74647"/>
+    <Deputado Nome="Aracely de Paula" Partido="PFL       " UF="MG" Voto="-" ideCadastro="74648"/>
+    <Deputado Nome="Carlos Melles" Partido="PFL       " UF="MG" Voto="Sim            " ideCadastro="74651"/>
+    <Deputado Nome="Carlos Mosconi" Partido="PSDB      " UF="MG" Voto="Sim            " ideCadastro="74652"/>
+    <Deputado Nome="Danilo de Castro" Partido="PSDB      " UF="MG" Voto="Sim            " ideCadastro="74654"/>
+    <Deputado Nome="Eduardo Barbosa" Partido="PSDB      " UF="MG" Voto="Sim            " ideCadastro="74655"/>
+    <Deputado Nome="Eliseu Resende" Partido="PFL       " UF="MG" Voto="-" ideCadastro="74657"/>
+    <Deputado Nome="Fernando Diniz" Partido="PMDB      " UF="MG" Voto="Sim            " ideCadastro="74658"/>
+    <Deputado Nome="Herculano Anghinetti" Partido="PPB       " UF="MG" Voto="-" ideCadastro="74660"/>
+    <Deputado Nome="Ibrahim Abi-Ackel" Partido="PPB       " UF="MG" Voto="Sim            " ideCadastro="74663"/>
+    <Deputado Nome="Jaime Martins" Partido="PFL       " UF="MG" Voto="-" ideCadastro="74665"/>
+    <Deputado Nome="Lael Varella" Partido="PFL       " UF="MG" Voto="-" ideCadastro="74742"/>
+    <Deputado Nome="Márcio Reinaldo Moreira" Partido="PPB       " UF="MG" Voto="Sim            " ideCadastro="74744"/>
+    <Deputado Nome="Mário de Oliveira" Partido="PST       " UF="MG" Voto="Sim            " ideCadastro="74747"/>
+    <Deputado Nome="Mauro Lopes" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74749"/>
+    <Deputado Nome="Nilmário Miranda" Partido="PT        " UF="MG" Voto="-" ideCadastro="74751"/>
+    <Deputado Nome="Odelmo Leão" Partido="PPB       " UF="MG" Voto="Sim            " ideCadastro="74752"/>
+    <Deputado Nome="Osmânio Pereira" Partido="PSDB      " UF="MG" Voto="Sim            " ideCadastro="74753"/>
+    <Deputado Nome="Paulo Delgado" Partido="PT        " UF="MG" Voto="Sim            " ideCadastro="74754"/>
+    <Deputado Nome="Roberto Brant" Partido="PFL       " UF="MG" Voto="Sim            " ideCadastro="74758"/>
+    <Deputado Nome="Romel Anizio" Partido="PPB       " UF="MG" Voto="Sim            " ideCadastro="74759"/>
+    <Deputado Nome="Saraiva Felipe" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74762"/>
+    <Deputado Nome="Sérgio Miranda" Partido="PCdoB     " UF="MG" Voto="Não            " ideCadastro="74763"/>
+    <Deputado Nome="Silas Brasileiro" Partido="PMDB      " UF="MG" Voto="Sim            " ideCadastro="74765"/>
+    <Deputado Nome="Tilden Santiago" Partido="PT        " UF="MG" Voto="-" ideCadastro="74767"/>
+    <Deputado Nome="Vittorio Medioli" Partido="PSDB      " UF="MG" Voto="-" ideCadastro="74768"/>
+    <Deputado Nome="Feu Rosa" Partido="PSDB      " UF="ES" Voto="-" ideCadastro="74771"/>
+    <Deputado Nome="João Coser" Partido="PT        " UF="ES" Voto="Sim            " ideCadastro="74772"/>
+    <Deputado Nome="Nilton Baiano" Partido="PPB       " UF="ES" Voto="Sim            " ideCadastro="74776"/>
+    <Deputado Nome="Rita Camata" Partido="PMDB      " UF="ES" Voto="Sim            " ideCadastro="74777"/>
+    <Deputado Nome="Aldir Cabral" Partido="PFL       " UF="RJ" Voto="Não            " ideCadastro="74828"/>
+    <Deputado Nome="Alexandre Cardoso" Partido="PSB       " UF="RJ" Voto="Não            " ideCadastro="74829"/>
+    <Deputado Nome="Alexandre Santos" Partido="PSDB      " UF="RJ" Voto="-" ideCadastro="74830"/>
+    <Deputado Nome="Arolde de Oliveira" Partido="PFL       " UF="RJ" Voto="-" ideCadastro="74833"/>
+    <Deputado Nome="Carlos Santana" Partido="PT        " UF="RJ" Voto="-" ideCadastro="74835"/>
+    <Deputado Nome="Eurico Miranda" Partido="PPB       " UF="RJ" Voto="Sim            " ideCadastro="74840"/>
+    <Deputado Nome="Fernando Gabeira" Partido="PT        " UF="RJ" Voto="Sim            " ideCadastro="74841"/>
+    <Deputado Nome="Fernando Gonçalves" Partido="PTB       " UF="RJ" Voto="-" ideCadastro="74842"/>
+    <Deputado Nome="Francisco Dornelles" Partido="PPB       " UF="RJ" Voto="-" ideCadastro="74844"/>
+    <Deputado Nome="Jair Bolsonaro" Partido="PPB       " UF="RJ" Voto="Não            " ideCadastro="74847"/>
+    <Deputado Nome="Jandira Feghali" Partido="PCdoB     " UF="RJ" Voto="-" ideCadastro="74848"/>
+    <Deputado Nome="João Mendes" Partido="PFL       " UF="RJ" Voto="Não            " ideCadastro="74849"/>
+    <Deputado Nome="Jorge Wilson" Partido="PSDB      " UF="RJ" Voto="Sim            " ideCadastro="74850"/>
+    <Deputado Nome="José Carlos Coutinho" Partido="PFL       " UF="RJ" Voto="-" ideCadastro="74851"/>
+    <Deputado Nome="Laura Carneiro" Partido="PFL       " UF="RJ" Voto="-" ideCadastro="74856"/>
+    <Deputado Nome="Márcio Fortes" Partido="PSDB      " UF="RJ" Voto="Sim            " ideCadastro="74860"/>
+    <Deputado Nome="Milton Temer" Partido="PT        " UF="RJ" Voto="Sim            " ideCadastro="74861"/>
+    <Deputado Nome="Miro Teixeira" Partido="PDT       " UF="RJ" Voto="Sim            " ideCadastro="74862"/>
+    <Deputado Nome="Roberto Jefferson" Partido="PTB       " UF="RJ" Voto="Sim            " ideCadastro="73420"/>
+    <Deputado Nome="Ronaldo Cezar Coelho" Partido="PSDB      " UF="RJ" Voto="Sim            " ideCadastro="73421"/>
+    <Deputado Nome="Rubem Medina" Partido="PFL       " UF="RJ" Voto="Não            " ideCadastro="73422"/>
+    <Deputado Nome="Simão Sessim" Partido="PPB       " UF="RJ" Voto="Sim            " ideCadastro="73424"/>
+    <Deputado Nome="Alberto Goldman" Partido="PSDB      " UF="SP" Voto="-" ideCadastro="73427"/>
+    <Deputado Nome="Aldo Rebelo" Partido="PCdoB     " UF="SP" Voto="-" ideCadastro="73428"/>
+    <Deputado Nome="Aloysio Nunes Ferreira" Partido="PSDB      " UF="SP" Voto="-" ideCadastro="73430"/>
+    <Deputado Nome="Antonio Carlos Pannunzio" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="73431"/>
+    <Deputado Nome="Antonio Kandir" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="73432"/>
+    <Deputado Nome="Arlindo Chinaglia" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="73433"/>
+    <Deputado Nome="Arnaldo Faria de Sá" Partido="PTB       " UF="SP" Voto="Não            " ideCadastro="73434"/>
+    <Deputado Nome="Ary Kara" Partido="PTB       " UF="SP" Voto="Sim            " ideCadastro="73435"/>
+    <Deputado Nome="Celso Russomanno" Partido="PPB       " UF="SP" Voto="-" ideCadastro="73441"/>
+    <Deputado Nome="Corauci Sobrinho" Partido="PFL       " UF="SP" Voto="Sim            " ideCadastro="73442"/>
+    <Deputado Nome="Cunha Bueno" Partido="PPB       " UF="SP" Voto="Abstenção      " ideCadastro="73443"/>
+    <Deputado Nome="De Velasco" Partido="PSL       " UF="SP" Voto="Não            " ideCadastro="73554"/>
+    <Deputado Nome="Delfim Netto" Partido="PPB       " UF="SP" Voto="-" ideCadastro="73445"/>
+    <Deputado Nome="Duilio Pisaneschi" Partido="PTB       " UF="SP" Voto="Sim            " ideCadastro="73446"/>
+    <Deputado Nome="Fernando Zuppo" Partido="PSDC      " UF="SP" Voto="Sim            " ideCadastro="73451"/>
+    <Deputado Nome="Jair Meneguelli" Partido="PT        " UF="SP" Voto="-" ideCadastro="73532"/>
+    <Deputado Nome="João Paulo" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="73534"/>
+    <Deputado Nome="Jorge Tadeu Mudalen" Partido="PMDB      " UF="SP" Voto="Sim            " ideCadastro="73535"/>
+    <Deputado Nome="José Aníbal" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="73536"/>
+    <Deputado Nome="José de Abreu" Partido="PTN       " UF="SP" Voto="-" ideCadastro="73539"/>
+    <Deputado Nome="José Genoíno" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="73540"/>
+    <Deputado Nome="Marcelo Barbieri" Partido="PMDB      " UF="SP" Voto="-" ideCadastro="73548"/>
+    <Deputado Nome="Michel Temer" Partido="PMDB      " UF="SP" Voto="-" ideCadastro="73552"/>
+    <Deputado Nome="Nelson Marquezelli" Partido="PTB       " UF="SP" Voto="Sim            " ideCadastro="73553"/>
+    <Deputado Nome="Paulo Lima" Partido="PMDB      " UF="SP" Voto="-" ideCadastro="73555"/>
+    <Deputado Nome="Ricardo Izar" Partido="PTB       " UF="SP" Voto="Sim            " ideCadastro="73557"/>
+    <Deputado Nome="Robson Tuma" Partido="PFL       " UF="SP" Voto="Sim            " ideCadastro="73558"/>
+    <Deputado Nome="Salvador Zimbaldi" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="73559"/>
+    <Deputado Nome="Telma de Souza" Partido="PT        " UF="SP" Voto="-" ideCadastro="73561"/>
+    <Deputado Nome="Vadão Gomes" Partido="PPB       " UF="SP" Voto="-" ideCadastro="73564"/>
+    <Deputado Nome="Valdemar Costa Neto" Partido="PL        " UF="SP" Voto="Não            " ideCadastro="73565"/>
+    <Deputado Nome="Wagner Salustiano" Partido="PPB       " UF="SP" Voto="-" ideCadastro="73643"/>
+    <Deputado Nome="Teté Bezerra" Partido="PMDB      " UF="MT" Voto="Sim            " ideCadastro="73652"/>
+    <Deputado Nome="Agnelo Queiroz" Partido="PCdoB     " UF="DF" Voto="Não            " ideCadastro="73654"/>
+    <Deputado Nome="Jofran Frejat" Partido="PPB       " UF="DF" Voto="Sim            " ideCadastro="73658"/>
+    <Deputado Nome="Wigberto Tartuce" Partido="PPB       " UF="DF" Voto="-" ideCadastro="73661"/>
+    <Deputado Nome="Barbosa Neto" Partido="PMDB      " UF="GO" Voto="-" ideCadastro="73663"/>
+    <Deputado Nome="Jovair Arantes" Partido="PSDB      " UF="GO" Voto="Não            " ideCadastro="73666"/>
+    <Deputado Nome="Lidia Quinan" Partido="PSDB      " UF="GO" Voto="Sim            " ideCadastro="73667"/>
+    <Deputado Nome="Pedro Canedo" Partido="PSDB      " UF="GO" Voto="-" ideCadastro="73672"/>
+    <Deputado Nome="Roberto Balestra" Partido="PPB       " UF="GO" Voto="-" ideCadastro="73674"/>
+    <Deputado Nome="Vilmar Rocha" Partido="PFL       " UF="GO" Voto="-" ideCadastro="73677"/>
+    <Deputado Nome="Zé Gomes da Rocha" Partido="PMDB      " UF="GO" Voto="-" ideCadastro="73678"/>
+    <Deputado Nome="Marisa Serrano" Partido="PSDB      " UF="MS" Voto="Sim            " ideCadastro="73760"/>
+    <Deputado Nome="Nelson Trad" Partido="PTB       " UF="MS" Voto="Sim            " ideCadastro="73761"/>
+    <Deputado Nome="Abelardo Lupion" Partido="PFL       " UF="PR" Voto="Sim            " ideCadastro="73764"/>
+    <Deputado Nome="Affonso Camargo" Partido="PSDB      " UF="PR" Voto="Sim            " ideCadastro="73765"/>
+    <Deputado Nome="Basílio Villani" Partido="PSDB      " UF="PR" Voto="Sim            " ideCadastro="73767"/>
+    <Deputado Nome="Dilceu Sperafico" Partido="PPB       " UF="PR" Voto="Sim            " ideCadastro="73768"/>
+    <Deputado Nome="Flávio Arns" Partido="PT        " UF="PR" Voto="-" ideCadastro="73771"/>
+    <Deputado Nome="Hermes Parcianello" Partido="PMDB      " UF="PR" Voto="-" ideCadastro="73772"/>
+    <Deputado Nome="José Borba" Partido="PMDB      " UF="PR" Voto="Sim            " ideCadastro="73775"/>
+    <Deputado Nome="José Janene" Partido="PPB       " UF="PR" Voto="Sim            " ideCadastro="73776"/>
+    <Deputado Nome="Luciano Pizzatto" Partido="PFL       " UF="PR" Voto="Sim            " ideCadastro="73777"/>
+    <Deputado Nome="Luiz Carlos Hauly" Partido="PSDB      " UF="PR" Voto="Sim            " ideCadastro="73778"/>
+    <Deputado Nome="Max Rosenmann" Partido="PMDB      " UF="PR" Voto="-" ideCadastro="73780"/>
+    <Deputado Nome="Nelson Meurer" Partido="PPB       " UF="PR" Voto="-" ideCadastro="73781"/>
+    <Deputado Nome="Odílio Balbinotti" Partido="PSDB      " UF="PR" Voto="Sim            " ideCadastro="73782"/>
+    <Deputado Nome="Padre Roque" Partido="PT        " UF="PR" Voto="Sim            " ideCadastro="73783"/>
+    <Deputado Nome="Ricardo Barros" Partido="PPB       " UF="PR" Voto="-" ideCadastro="73788"/>
+    <Deputado Nome="Werner Wanderer" Partido="PFL       " UF="PR" Voto="Sim            " ideCadastro="73792"/>
+    <Deputado Nome="Edinho Bez" Partido="PMDB      " UF="SC" Voto="Sim            " ideCadastro="73793"/>
+    <Deputado Nome="Edison Andrino" Partido="PMDB      " UF="SC" Voto="Sim            " ideCadastro="73794"/>
+    <Deputado Nome="Hugo Biehl" Partido="PPB       " UF="SC" Voto="Sim            " ideCadastro="73795"/>
+    <Deputado Nome="João Matos" Partido="PMDB      " UF="SC" Voto="-" ideCadastro="73873"/>
+    <Deputado Nome="João Pizzolatti" Partido="PPB       " UF="SC" Voto="-" ideCadastro="73874"/>
+    <Deputado Nome="Paulo Gouvêa" Partido="PFL       " UF="SC" Voto="Sim            " ideCadastro="73884"/>
+    <Deputado Nome="Serafim Venzon" Partido="PDT       " UF="SC" Voto="Sim            " ideCadastro="73885"/>
+    <Deputado Nome="Adão Pretto" Partido="PT        " UF="RS" Voto="-" ideCadastro="73886"/>
+    <Deputado Nome="Airton Dipp" Partido="PDT       " UF="RS" Voto="-" ideCadastro="73888"/>
+    <Deputado Nome="Augusto Nardes" Partido="PPB       " UF="RS" Voto="Sim            " ideCadastro="73889"/>
+    <Deputado Nome="Darcísio Perondi" Partido="PMDB      " UF="RS" Voto="Sim            " ideCadastro="73891"/>
+    <Deputado Nome="Enio Bacci" Partido="PDT       " UF="RS" Voto="-" ideCadastro="73893"/>
+    <Deputado Nome="Fetter Junior" Partido="PPB       " UF="RS" Voto="Sim            " ideCadastro="73896"/>
+    <Deputado Nome="Germano Rigotto" Partido="PMDB      " UF="RS" Voto="Sim            " ideCadastro="73897"/>
+    <Deputado Nome="Mendes Ribeiro Filho" Partido="PMDB      " UF="RS" Voto="-" ideCadastro="73904"/>
+    <Deputado Nome="Nelson Proença" Partido="PPS       " UF="RS" Voto="-" ideCadastro="73907"/>
+    <Deputado Nome="Osvaldo Biolchi" Partido="PMDB      " UF="RS" Voto="Sim            " ideCadastro="73909"/>
+    <Deputado Nome="Paulo Paim" Partido="PT        " UF="RS" Voto="Sim            " ideCadastro="73910"/>
+    <Deputado Nome="Telmo Kirst" Partido="PPB       " UF="RS" Voto="Sim            " ideCadastro="73989"/>
+    <Deputado Nome="Fioravante" Partido="PT        " UF="RS" Voto="Sim            " ideCadastro="73990"/>
+    <Deputado Nome="Yeda Crusius" Partido="PSDB      " UF="RS" Voto="-" ideCadastro="73992"/>
+    <Deputado Nome="Luiz Dantas" Partido="PTB       " UF="AL" Voto="Sim            " ideCadastro="74521"/>
+    <Deputado Nome="Albérico Filho" Partido="PMDB      " UF="MA" Voto="Sim            " ideCadastro="74018"/>
+    <Deputado Nome="Ana Catarina" Partido="PMDB      " UF="RN" Voto="Sim            " ideCadastro="74248"/>
+    <Deputado Nome="Ariosto Holanda" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74103"/>
+    <Deputado Nome="Arnaldo Madeira" Partido="PSDB      " UF="SP" Voto="Sim            " ideCadastro="73993"/>
+    <Deputado Nome="Ayrton Xerêz" Partido="PFL       " UF="RJ" Voto="Não            " ideCadastro="74024"/>
+    <Deputado Nome="Chico da Princesa" Partido="PSDB      " UF="PR" Voto="Sim            " ideCadastro="74000"/>
+    <Deputado Nome="Costa Ferreira" Partido="PFL       " UF="MA" Voto="Sim            " ideCadastro="74016"/>
+    <Deputado Nome="Jaime Fernandes" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="74001"/>
+    <Deputado Nome="João Magalhães" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74120"/>
+    <Deputado Nome="João Tota" Partido="PPB       " UF="AC" Voto="Sim            " ideCadastro="74240"/>
+    <Deputado Nome="José Lourenço" Partido="PMDB      " UF="BA" Voto="-" ideCadastro="74125"/>
+    <Deputado Nome="Júlio Redecker" Partido="PPB       " UF="RS" Voto="-" ideCadastro="73994"/>
+    <Deputado Nome="Lamartine Posella" Partido="PMDB      " UF="SP" Voto="-" ideCadastro="74134"/>
+    <Deputado Nome="Marçal Filho" Partido="PMDB      " UF="MS" Voto="Sim            " ideCadastro="74124"/>
+    <Deputado Nome="Marcus Vicente" Partido="PPB       " UF="ES" Voto="Sim            " ideCadastro="74235"/>
+    <Deputado Nome="Moacir Micheletto" Partido="PMDB      " UF="PR" Voto="Sim            " ideCadastro="74238"/>
+    <Deputado Nome="Murilo Domingos" Partido="PTB       " UF="MT" Voto="-" ideCadastro="74112"/>
+    <Deputado Nome="Narcio Rodrigues" Partido="PSDB      " UF="MG" Voto="Sim            " ideCadastro="74108"/>
+    <Deputado Nome="Neiva Moreira" Partido="PDT       " UF="MA" Voto="-" ideCadastro="74225"/>
+    <Deputado Nome="Olavo Calheiros" Partido="PMDB      " UF="AL" Voto="Não            " ideCadastro="74005"/>
+    <Deputado Nome="Oscar Andrade" Partido="PL        " UF="RO" Voto="-" ideCadastro="74109"/>
+    <Deputado Nome="Paulo Feijó" Partido="PSDB      " UF="RJ" Voto="-" ideCadastro="74017"/>
+    <Deputado Nome="Pedro Henry" Partido="PPB       " UF="MT" Voto="Sim            " ideCadastro="74111"/>
+    <Deputado Nome="Pedro Valadares" Partido="PSB       " UF="SE" Voto="-" ideCadastro="74102"/>
+    <Deputado Nome="Raimundo Gomes de Matos" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74216"/>
+    <Deputado Nome="Ricardo Rique" Partido="PSDB      " UF="PB" Voto="-" ideCadastro="74023"/>
+    <Deputado Nome="Walter Pinheiro" Partido="PT        " UF="BA" Voto="Não            " ideCadastro="74218"/>
+    <Deputado Nome="Ricarte de Freitas" Partido="PSDB      " UF="MT" Voto="-" ideCadastro="73490"/>
+    <Deputado Nome="Tarcisio Zimmermann" Partido="PT        " UF="RS" Voto="Sim            " ideCadastro="73577"/>
+    <Deputado Nome="Osvaldo Sobrinho" Partido="PTB       " UF="MT" Voto="Sim            " ideCadastro="73571"/>
+    <Deputado Nome="Marcos Lima" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74745"/>
+    <Deputado Nome="Bonifácio de Andrada" Partido="PSDB      " UF="MG" Voto="-" ideCadastro="74650"/>
+    <Deputado Nome="Alcione Athayde" Partido="PSB       " UF="RJ" Voto="Não            " ideCadastro="74014"/>
+    <Deputado Nome="Esther Grossi" Partido="PT        " UF="RS" Voto="Sim            " ideCadastro="73894"/>
+    <Deputado Nome="João Magno" Partido="PT        " UF="MG" Voto="Sim            " ideCadastro="73572"/>
+    <Deputado Nome="Yvonilton Gonçalves" Partido="PFL       " UF="BA" Voto="-" ideCadastro="73573"/>
+    <Deputado Nome="Reginaldo Germano" Partido="PFL       " UF="BA" Voto="Sim            " ideCadastro="73574"/>
+    <Deputado Nome="Joel De Hollanda" Partido="PFL       " UF="PE" Voto="-" ideCadastro="73575"/>
+    <Deputado Nome="Pedro Corrêa" Partido="PPB       " UF="PE" Voto="Sim            " ideCadastro="74431"/>
+    <Deputado Nome="Zulaiê Cobra" Partido="PSDB      " UF="SP" Voto="-" ideCadastro="73645"/>
+    <Deputado Nome="Nelson Otoch" Partido="PSDB      " UF="CE" Voto="-" ideCadastro="74301"/>
+    <Deputado Nome="Helenildo Ribeiro" Partido="PSDB      " UF="AL" Voto="Sim            " ideCadastro="73582"/>
+    <Deputado Nome="Nair Xavier Lobo" Partido="PMDB      " UF="GO" Voto="-" ideCadastro="74021"/>
+    <Deputado Nome="Antonio Carlos Mendes Thame" Partido="PSDB      " UF="SP" Voto="-" ideCadastro="73584"/>
+    <Deputado Nome="Gessivaldo Isaias" Partido="PMDB      " UF="PI" Voto="-" ideCadastro="72553"/>
+    <Deputado Nome="José Aleksandro" Partido="PSL       " UF="AC" Voto="-" ideCadastro="73587"/>
+    <Deputado Nome="Mário Assad Júnior" Partido="PL        " UF="MG" Voto="Sim            " ideCadastro="74329"/>
+    <Deputado Nome="Chico Sardelli" Partido="PFL       " UF="SP" Voto="-" ideCadastro="73595"/>
+    <Deputado Nome="Edir Oliveira" Partido="PTB       " UF="RS" Voto="-" ideCadastro="73599"/>
+    <Deputado Nome="Aldo Arantes" Partido="PCdoB     " UF="GO" Voto="Não            " ideCadastro="73662"/>
+    <Deputado Nome="Itamar Serpa" Partido="PSDB      " UF="RJ" Voto="-" ideCadastro="74846"/>
+    <Deputado Nome="João Carlos Bacelar" Partido="PFL       " UF="BA" Voto="-" ideCadastro="74131"/>
+    <Deputado Nome="Orlando Fantazzini" Partido="PT        " UF="SP" Voto="-" ideCadastro="73603"/>
+    <Deputado Nome="Ezidio Pinheiro" Partido="PSB       " UF="RS" Voto="Não            " ideCadastro="73895"/>
+    <Deputado Nome="João Eduardo Dado" Partido="PDT       " UF="SP" Voto="Sim            " ideCadastro="73682"/>
+    <Deputado Nome="Wagner Rossi" Partido="PMDB      " UF="SP" Voto="Sim            " ideCadastro="73567"/>
+    <Deputado Nome="Asdrubal Bentes" Partido="PMDB      " UF="PA" Voto="Sim            " ideCadastro="74222"/>
+    <Deputado Nome="Divaldo Suruagy" Partido="PST       " UF="AL" Voto="-" ideCadastro="73685"/>
+    <Deputado Nome="Ary José Vanazzi" Partido="PT        " UF="RS" Voto="Sim            " ideCadastro="73683"/>
+    <Deputado Nome="Luiz Eduardo Greenhalgh" Partido="PT        " UF="SP" Voto="-" ideCadastro="74137"/>
+    <Deputado Nome="Socorro Gomes" Partido="PCdoB     " UF="PA" Voto="Não            " ideCadastro="74085"/>
+    <Deputado Nome="Maurilio Ferreira Lima" Partido="PMDB      " UF="PE" Voto="Sim            " ideCadastro="65904"/>
+    <Deputado Nome="Luiz Alberto" Partido="PT        " UF="BA" Voto="Sim            " ideCadastro="74133"/>
+    <Deputado Nome="Tânia Soares" Partido="PCdoB     " UF="SE" Voto="-" ideCadastro="73687"/>
+    <Deputado Nome="Luciano Zica" Partido="PT        " UF="SP" Voto="Sim            " ideCadastro="73545"/>
+    <Deputado Nome="Osmar Terra" Partido="PMDB      " UF="RS" Voto="-" ideCadastro="73692"/>
+    <Deputado Nome="Antonio Cruz" Partido="PMDB      " UF="MS" Voto="Sim            " ideCadastro="73817"/>
+    <Deputado Nome="Wilson Cignachi" Partido="PMDB      " UF="RS" Voto="Sim            " ideCadastro="73991"/>
+    <Deputado Nome="Genésio Bernardino" Partido="PMDB      " UF="MG" Voto="-" ideCadastro="74659"/>
+   </votos>
+  </Votacao>
+ </Votacoes>
+</proposicao>
