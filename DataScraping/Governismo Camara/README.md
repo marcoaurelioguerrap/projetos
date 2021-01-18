@@ -11,7 +11,6 @@ em um txt diferente ( ex.: "foi_MPV_11_2001.txt" , [foi usado ou não no calculo
 
 "Grafico Governismo.py" - Cria os graficos com a média mensal e a média movél de 60 votações.
 
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/DataScraping/Governismo%20Camara/media_rolling.png?raw=true)
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/DataScraping/Governismo%20Camara/media_mensal.png?raw=true)
-
-![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/DataScraping/Governismo%20Camara/media_rolling.png?raw=true)
