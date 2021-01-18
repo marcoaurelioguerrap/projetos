@@ -10,3 +10,7 @@ para calcular os indice de apoio ao governo, salvo no arquivo "governismo.csv". 
 em um txt diferente ( ex.: "foi_MPV_11_2001.txt" , [foi usado ou não no calculo]_[tipo da votação]_[id do seção]_[ano].txt). 
 
 "Grafico Governismo.py" - Cria os graficos com a média mensal e a média movél de 60 votações.
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/DataScraping/Governismo Camara/media_mensal.png?raw=true)
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/DataScraping/Governismo Camara/media_rolling.png?raw=true)
