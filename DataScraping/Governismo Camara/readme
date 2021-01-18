@@ -5,7 +5,8 @@ e calcular o indice de apoio ao governo nas votações da casa (#Votos seguindo 
 e em seguida gera um arquivo ("proposicoes.csv").
 
 "scrap camara.py" - Usa os ID das votações guardadas no arquivo "proposicoes.csv" para buscar os votos por seção
-para calcular os indice de apoio ao governo, salvo no arquivo "governismo.csv".
+para calcular os indice de apoio ao governo, salvo no arquivo "governismo.csv". Além disso, são salvos as votações
+em um txt diferente ( "foi_MPV_11_2001.txt" , [foi usado ou não no calculo]_[tipo da votação]_[id do seção]_[ano].txt). 
 
 "Grafico Governismo.py" - Cria os graficos com a média mensal e a média movél de 60 votações.
 
