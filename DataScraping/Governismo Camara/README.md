@@ -1,4 +1,4 @@
-Os codigos dessa pasta são usados para ler o site de dados aberto da câmara dos deputados ( https://dadosabertos.camara.leg.br/swagger/api.html )
+  Os codigos dessa pasta são usados para ler o site de dados aberto da câmara dos deputados ( https://dadosabertos.camara.leg.br/swagger/api.html )
 e calcular o indice de apoio ao governo nas votações da casa (#Votos seguindo a orientação do governo / #Votos totais.
 
 "lista_as_votacoes_camara.py" - cria uma lista com todas as votações na camara no periodo de 2001 a 2020.
