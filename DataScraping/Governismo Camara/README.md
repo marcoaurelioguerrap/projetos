@@ -13,6 +13,6 @@ em um txt diferente ( ex.: "foi_MPV_11_2001.txt" , [foi usado ou não no calculo
 
 ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/media_mensal.png?raw=true)
 
-![alt text](https://github.com/marcoaurelioguerrap/projetos/DataScraping/Governismo Camara/main/media_mensal.png?raw=true)
+![alt text](https://github.com/marcoaurelioguerrap/projetos/DataScraping/Governismo_Camara/main/media_mensal.png?raw=true)
 
-![alt text](https://github.com/marcoaurelioguerrap/projetos/DataScraping/Governismo Camara/main/media_rolling.png?raw=true)
+![alt text](https://github.com/marcoaurelioguerrap/projetos/DataScraping/Governismo_Camara/main/media_rolling.png?raw=true)
