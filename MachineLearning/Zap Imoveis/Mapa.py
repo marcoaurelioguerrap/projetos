@@ -55,7 +55,8 @@ def localizacao_rua(endereco):
     
     return;
 
-
+# Aplicação da função que transforma endereço em latitude e longitude 
+# ( como nao tem numero é a localização do primeiro numero da rua )
 Locs = [localizacao_rua(str(x)) for x in Data2['endereco']  ]
 
 Data2['Lat'] = 'NaN'
@@ -88,9 +89,6 @@ Data3 = Data3.drop("endereco", axis=1)
 
 Data3 = Data3.loc[Data3['Long'] < -43.12  ]
 Data3 = Data3.loc[Data3['Lat'] < -22.77  ]
-
-
-Data3.to_pickle("./dados_formatados.pkl")
 
 import math
 Data3_l = Data3
