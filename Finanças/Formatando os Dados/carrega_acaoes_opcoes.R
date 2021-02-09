@@ -7,8 +7,6 @@ require(tidyverse)
 
 lista_das_acoes <- readRDS( file = ".//arquivos B3/lista_das_acoes.RData" )
 
-# POSSIVEL BUG , algum erro na lista_dos_CALL e PUT
-
 lista_dos_CALL <- readRDS( file = ".//arquivos B3/lista_dos_CALL.RData" )
 
 lista_dos_PUT <- readRDS( file = ".//arquivos B3/lista_dos_PUT.RData" )
@@ -28,8 +26,6 @@ colnames(lista_das_acoes.unstacked) <- c("date","price","ticker","fator cotacao"
 
 
 # desempilhando os dados empilhandos 
-
-#### TODO: colocar prece e fator de cotação pra corrigir o preco , só precisa formatar melhor o nome da cada coluna
 
 lista_das_acoes.stacked <- reshape(lista_das_acoes.unstacked, idvar = "date",
                  timevar = "ticker", direction = "wide", v.names = c("price","fator cotacao")  )
