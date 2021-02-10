@@ -568,6 +568,27 @@ gera_os_erros_quadraticos <- function(teste){
   return(Label_eqm)
 }
 
+coeficiente_de_correlacao <- function(y_chapeu,y){
+  
+  rss <- sum((y_chapeu - y) ^ 2)  
+  tss <- sum((y - mean(y)) ^ 2)  
+  
+  rsq <- 1 - rss/tss
+  
+  return(rsq)
+  
+}                
+                  
+gera_os_r_quadrados <- function(teste){
+  Label_eqm <- data.frame()
+  for (modelo in names(teste[14:20])){
+    Label_eqm[modelo,'modelo'] <- substr(modelo, 7, nchar(modelo))
+    Label_eqm[modelo,'EQM'] <- round(coeficiente_de_correlacao(teste[,modelo],teste[,'preco_atual']),4)
+    Label_eqm[modelo,'Label'] <- paste0('Erro Quadrático Médio: ', round(coeficiente_de_correlacao(teste[,modelo],teste[,'preco_atual']),4))
+  }
+  return(Label_eqm)
+}                  
+                  
 # TODO :consertar legendas e conferir como que fica quando muda o preco e se da certo eu plotar o grafico no preco ajustado
 faz_os_graficos_precos_brutos <- function(dias_de_trade,data_atual,dados,simulacoes_em_nivel){
   
