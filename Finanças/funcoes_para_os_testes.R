@@ -1,15 +1,4 @@
-
-
-
-
-# nao sei se vou ter uma funcao pra cuspir as opcoes com as probabilidades ou se vou cuspir primeiro as 
-# simulacoes e depois calcular as probs
 # TODO : Listar onde é usado as funções
-# TODO : Conferir se existe problema de usar assign na carteira nas funcoes que mudam o objeto carteira
-# TODO : !!!!!!!!!!!!conferir problema de variavel global!!!!!!!!!!!!
-
-### TO FAZENDO AINDA ISSO, nao sei como vai fica ainda
-
 
 ############################################### 1) Objetos usados como inputs ################################################################
 
@@ -130,7 +119,7 @@ gerador_das_simulacoes <- function( dados_funcao, rotulos , dias_simulados , n_s
   start_time <- Sys.time()
   
   # 1) parametros do ugarch
-  # TODO : ( IMPORTANTE ) fazer a seleção do modelo ... ASSIM Q TERMINAR O LOOP DAS ESTRATÉGIAS
+  # TODO : ( IMPORTANTE ) fazer a seleção do modelo ...
   
   spec <- ugarchspec(variance.model = list(model = 'gjrGARCH',
                                            garchOrder = c(3,3)), 
