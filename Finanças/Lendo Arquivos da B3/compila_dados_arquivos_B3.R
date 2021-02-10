@@ -134,9 +134,7 @@ for ( ano in anos ){
   dados_bov$`PREEXE - PREÇO DE EXERCÍCIO PARA O MERCADO DE OPÇÕES OU VALOR DO CONTRATO PARA O MERCADO DE TERMO SECUNDÁRIO` <- dados_bov$`PREEXE - PREÇO DE EXERCÍCIO PARA O MERCADO DE OPÇÕES OU VALOR DO CONTRATO PARA O MERCADO DE TERMO SECUNDÁRIO` /100
   
   #### lista as acoes
-  
-  # TODO: AJUSTAR OS PRECOS DE FECHAMENTO !!!!!!!!
-  
+    
   lista_das_acoes.temp <- dados_bov[which(dados_bov$`TPMERC - TIPO DE MERCADO` == 10),]   
   
   lista_das_acoes <- rbind(lista_das_acoes,lista_das_acoes.temp)
