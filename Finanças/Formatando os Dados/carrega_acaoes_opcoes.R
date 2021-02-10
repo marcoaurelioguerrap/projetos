@@ -48,3 +48,6 @@ lista_das_acoes.serie <- as.xts(lista_das_acoes.stacked[-2479,-1])
 rm(lista_das_acoes.stacked)
 
 ####
+
+# rodar o "le div e split.R" em seguida para fazer os calculos de ajuste nos precos
+
