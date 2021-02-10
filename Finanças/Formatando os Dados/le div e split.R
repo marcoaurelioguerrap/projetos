@@ -3,7 +3,7 @@ library("rjson")
 
 # le os dados de dividendos e splits salvos do PYTHON yfinance
 
-# TODO : fazer um loop que gera os precos ajustado para todas as acoes ( as regras para cada esta descrito mais a baixo)
+# TODO : fazer um loop que gera os precos ajustado para todas as acoes ( as regras para cada estão descritas mais a baixo)
 
 
 json_data <- fromJSON(file = ".//dados de desdobramentos e dividendos/dados_split_div.txt")
@@ -28,12 +28,13 @@ splits <- data.frame(date = as.Date(names(json_data[[acao]]$`Stock Splits`)),
 
 # splits
 teste1 <- lista_das_acoes.serie$p.PETR4
-teste2 <- lista_das_acoes.serie$f.PETR4
+teste2 <- lista_das_acoes.serie$f.PETR4 # fator de correção do preço 
 teste <- teste1/teste2
 
+# Calculo para cada ação #####
+# OBS.: preciso fazer incorporar isso no código para ser feito automáticamente !
+
 #### ITUB4,  ITAU4 ####
-
-
 
 #teste1 <- rbind(lista_das_acoes.serie$p.ITAU4[complete.cases(lista_das_acoes.serie$p.ITAU4) ],
 #              lista_das_acoes.serie$p.ITUB4[complete.cases(lista_das_acoes.serie$p.ITUB4) ])
@@ -89,8 +90,6 @@ teste <- teste1/teste2
 
 #### ABEV3,  AMBV3 ####
 
-
-
 #teste1 <- rbind(lista_das_acoes.serie$p.AMBV3[complete.cases(lista_das_acoes.serie$p.AMBV3) ],
 #                lista_das_acoes.serie$p.ABEV3[complete.cases(lista_das_acoes.serie$p.ABEV3) ])
 
@@ -109,8 +108,6 @@ teste <- teste1/teste2
 
 #### BRFS3,  PRGA3 ####
 
-
-
 #teste1 <- rbind(lista_das_acoes.serie$p.PRGA3[complete.cases(lista_das_acoes.serie$p.PRGA3) ],
 #               lista_das_acoes.serie$p.BRFS3[complete.cases(lista_das_acoes.serie$p.BRFS3) ])
 
@@ -124,8 +121,6 @@ teste <- teste1/teste2
 
 #### B3SA3,  BVMF3 ####
 
-
-
 #teste1 <- rbind(lista_das_acoes.serie$p.BVMF3[complete.cases(lista_das_acoes.serie$p.BVMF3) ],
 #               lista_das_acoes.serie$p.B3SA3[complete.cases(lista_das_acoes.serie$p.B3SA3) ])
 
@@ -137,8 +132,6 @@ teste <- teste1/teste2
 #####
 
 #### COGN3,  KROT3 , KROT4 ####
-
-
 
 #teste1 <- rbind(lista_das_acoes.serie$p.KROT3[complete.cases(lista_das_acoes.serie$p.KROT3) ],
 #               lista_das_acoes.serie$p.COGN3[complete.cases(lista_das_acoes.serie$p.COGN3) ])
@@ -157,22 +150,19 @@ teste <- teste1/teste2
 
 #### PETR4 ####
 
-# nao desconta dividendo
-
 splits[1,1] <- "2000-06-22"
 
 #####
 
-
-
 #### GGBR4 ####
-
-
 
 #splits[2,2] <- 1/1000
 
 #####
-# dividendos nao desconta em 4
+
+# Loops que fazem o ajuste do preço ! #####
+
+# OBS.: dividendos nao desconta em 4
 
 #i <- 1
 #while ( div[i,1]<= as.Date(last(index(teste)))  ){
