@@ -7,27 +7,7 @@ import csv
 import yfinance as yf
 import datetime
 
-#acao = yf.Ticker("PETR4.SA)
-
-# get stock info
-#msft.info
-
-# get historical market data
-#hist = msft.history(period="max")
-
-# show actions (dividends, splits)
-#msft.actions
-
-# show dividends
-#msft.dividends
-
-# show splits
-#msft.splits
-
-#lista_acoes = []
-
-
-
+# Salva os dados de Dividendos e desdobramentos para as ações estudadas 
 
 with open("acoes.estudadas.csv", newline = "") as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',', quotechar='"')
