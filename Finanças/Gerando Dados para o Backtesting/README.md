@@ -1,8 +1,9 @@
 **Info**
 
-"salva_os_dados_das_simulacoes_para_backtesting.R" - Esse código é utilizado para gerar os dados que serão utilizado no backtesting das estratégias. Ele consiste me criar um objeto. OBS.: demora certa de 6 horas para rodar o código todo. para reduzir o tamanho do periodo em que se gera os dados na linha 126 do código é possivel selecionar os dias que seja gerados as informções de CALL e PUT.
-chamado de ALL_CALLS e ALL_PUTS que é utilizado pelo "backtesting.R" e "backtesting_varios_anos.R". Também é gerado os retornos e os sigmas projetados pelo GARCH por horizonte 
+"salva_os_dados_das_simulacoes_para_backtesting.R" - Esse código é utilizado para gerar os dados que serão utilizado no backtesting das estratégias. Ele consiste me criar um objeto chamado de ALL_CALLS e ALL_PUTS que é utilizado pelo "backtesting.R" e "backtesting_varios_anos.R". Também é gerado os retornos e os sigmas projetados pelo GARCH por horizonte. 
+
 ( ou seja, são n dias projetados por dia ). Também é salvo se o GARCH convergiu ou não.
+OBS.: demora certa de 6 horas para rodar o código todo. para reduzir o tamanho do periodo em que se gera os dados na linha 126 do código é possivel selecionar os dias que seja gerados as informções de CALL e PUT.
 
 -GARCH, o modelo utilizado é definido no "funcoes_para_os_testes.R" na função gerador_das_simulacoes(). O modelo utilizado é gjr GARCH que leva em conta choques assimétricos com os seguintes parametros: arma(2,2), GARCH(3,3) , média incluída e utilizando t-student como a distribuição dos choques. A seleção do modelo foi através de um grid search realizado nos hiperparametros ( ordem armar, ordem do garch, média inclusa ou não, distribuição utilizada ). A amostra considerou todo o periodo de observação dos logs retornos dos preços ( no script "selecionando_garch_para_cada_acao.R" faço isso para 13 ações , no entanto só utilizo o resultado da PETR4 pois é o papel que estou estudando no momento as estratégias. Uma ideia para melhora é de quando eu for considerar outras ações para o teste de estratégias irei utilizar o MGARCH que é uma versão multivariavel do GARCH.
 
