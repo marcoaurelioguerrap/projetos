@@ -10,11 +10,15 @@ library(rugarch)
 
 # salva os resultados das simulacoes 
 
+# antes executar o código "funcoes_para_os_testes.R"
+
 ##### 1) Inputs #####
 
 # as n ultimas observacoes utilizadas na regressão para simulacao
 tamanho_da_amostra_para_regressão <- 1000 
 
+# carrega os precos ajustados e brutos
+preco.acoes.nivel <- readRDS("preco.acoes.nivel_preview.RData")
 
 # TODO : Generalizar para todas ações
 Fator_correcao_TEMPORARIO <- preco.acoes.nivel$PETR4$Preco_ajustado / preco.acoes.nivel$PETR4$Preco_bruto
@@ -28,7 +32,8 @@ retornos <- returns_qrmtools(preco.acoes.nivel$PETR4$Preco_ajustado)
 
 #####
 
-# preparando carteira que faz o log
+# preparando carteira que faz o log ( isso é usado para salvar todas opções do papel selecionado ( PETR4 no caso ) 
+# e gerar os preços para as opções sem liquidez
 
 carteira <- list(dia = as.Date("2004-02-17"),
                  cash = 999999999999999999999999,
@@ -50,7 +55,7 @@ carteira$portifolio$acoes$data_compra <- as.Date(carteira$portifolio$acoes$data_
 
 
 # loop principal
-
+# objeto que guarda todas as opções e os preços projetados para as que não possuem liquidez
 
 ALL_CALLS <- data.frame( cbind(data = "2004-01-01" ,data_compra = "2004-01-01"  ,preco_fec = 0,                
                                vencimento = 0 , ativo = 0,                    
@@ -84,6 +89,7 @@ ALL_PUTS <- ALL_PUTS[-1,]
 historico <- list()
 counter <- 1
 
+# Objeto para guardas os sigmas calculados pelo GARCH
 Sigmas <- xts()
 
 # dias de simulacoes usados pelo GARCH
@@ -119,7 +125,7 @@ colnames( retornos_simulados ) <- seq(1,n,1)
 retornos_simulados <- xts(retornos_simulados,order.by = dias_de_trade)
 
 
-# sigma :
+# Objeto para guardar Sigmas projetados por os horizontes ( 1:n ) :
 
 Zigmas_forcasted_todos <- as.data.frame(matrix(0,nrow = length(dias_de_trade), ncol = n ))
 
@@ -137,7 +143,7 @@ colnames( Sigmas ) <- "Sigma"
 
 Sigmas <- xts(Sigmas,order.by = dias_de_trade)
 
-# quebra galho pq esqueci de salvar os sigmas no loop
+# quebra galho pq esqueci de salvar os sigmas no loop ( não rodar  )
 #teste <- unique(cbind(ALL_CALLS$data, ALL_CALLS$sigma))
 
 #for( i in 1:length(dias_de_trade)) {
@@ -148,8 +154,13 @@ Sigmas <- xts(Sigmas,order.by = dias_de_trade)
 # para salvar os dias que o garch nao convergiu
 
 nao_convergiu <- xts(matrix(0 , nrow = length(dias_de_trade), ncol = 1),order.by = dias_de_trade)
+##########################################################################################################################################################################
 
-# loop principal que salva os dados para backtesting   ~2 hrs rodando
+
+# OBS.: loop principal que salva os dados para backtesting   ~2 hrs rodando
+
+
+##########################################################################################################################################################################
 
 # com n = 120 o loop para  "3464: 2020-01-22" por que em 120 nao tem mais fator de correção , nao tem dados ... tenho
 # q atualizar isso
@@ -254,10 +265,12 @@ for ( data in dias_de_trade){
     
   }
   
+  # salva a média dos retornos simulados
   for (i in 1:n){
     retornos_simulados[data,i] <- rowMeans(simulacoes_em_nivel_para_prob)[i]
   }
   
+  # salva os sigmas projetados para n dias a frente
   for (i in 1:n){
     Zigmas_forcasted_todos[data,i] <- Zigmas_forcasted[i]
   }
@@ -302,7 +315,7 @@ for ( data in dias_de_trade){
   
   # preparando para salvar os dados das opcoes
   
-  # formatando e separando os CALLS do dia para adcionar ao historico
+  # formatando e separando os CALLS do dia para adcionar ao historico ######
   
   S_CALLS <- carteira$portifolio$calls
   
@@ -336,7 +349,9 @@ for ( data in dias_de_trade){
   
   ALL_CALLS <- rbind( ALL_CALLS , S_CALLS)
   
-  # formatando e separando os PUTS do dia para adcionar ao historico
+  ######
+  
+  # formatando e separando os PUTS do dia para adcionar ao historico ######
   
   S_PUTS <- carteira$portifolio$puts
   
@@ -365,6 +380,8 @@ for ( data in dias_de_trade){
   S_PUTS$moneyness <- carteira$portifolio$puts$strike / as.numeric(pega_o_preco_bruto("PETR4",data))
   
   ALL_PUTS <- rbind( ALL_PUTS , S_PUTS)
+  
+  ######
   
   counter <- counter + 1
   #print(paste0( "Saldo : ", carteira$cash + try((carteira$portifolio$acoes$qtde %*% carteira$portifolio$acoes$preco_compra)) ))
