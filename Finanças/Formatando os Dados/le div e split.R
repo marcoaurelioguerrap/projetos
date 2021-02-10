@@ -206,7 +206,7 @@ preco.acoes.nivel[[acao]] <- list("Preco_ajustado" = teste,
 
 
 saveRDS( preco.acoes.nivel , file = "preco.acoes.nivel_preview.RData")  
-#preco.acoes.nivel.preview <- readRDS("preco.acoes.nivel_preview.RData")
+#preco.acoes.nivel <- readRDS("preco.acoes.nivel_preview.RData")
 
 rm(teste)
 rm(teste1)
