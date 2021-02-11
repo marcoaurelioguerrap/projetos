@@ -9,6 +9,23 @@ OBS.: demora certa de 6 horas para rodar o código todo. para reduzir o tamanho 
 
 -ALL_CALLS e ALL_PUTS contém dados de todas as opções negociadas entre 2006 e 2020. Atualmente o código só gera essas informações para o ativo PETR4. A ideia é continuar aprimorando o código para gerar essas mesmas informações para outras ações ( parte do código levou isso em conta , mas em alguns momentos eu queria a solução rapida e simplesmente usava a solução não generalizavel ). Os dados salvos dessas opções são referente aos preços iniciais, preço simulado por 7 metodos diferentes , dias para o vencimento, premio em relação ao strike, quantos dias que não ocorre trade com o papel, as letras gregas e o moneyness ( porcentagem de diferença do preço da ação ) da opção. Na pasta possuem 3 arquivos de ALL_CALLS e ALL_PUTS cada, isso se deu devido a um erro que ocorreu por dois dias onde existia informação sobre as opções mas não da ação. como o tempo do execução do loop inteiro é de aproximadamente 6 horas , para evitar de rodar tudo de novo apenas dividi os arquivos. 
 
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/scatter_plot_call.png?raw=true)
+
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/scatter_plot_put.png?raw=true)
+
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/misspricing_call.png?raw=true)
+
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/misspricing_put.png?raw=true)
+
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/misspricing_contagem_em_log_call.png?raw=true)
+
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/misspricing_contagem_em_log_put.png?raw=true)
+
 OBS.: Ele utiliza os dados gerados pelos scripts :
 > "compila_dados_arquivos_B3.R", "le div e split.R" 
 
