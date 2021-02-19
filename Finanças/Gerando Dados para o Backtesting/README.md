@@ -12,6 +12,8 @@ Esses dados estão nos salvos nos seguintes arquivos
 
 Embora os dois primeiros RData's não estão nesse repositório os dois ultimos estão. o "compila_dados_arquivos_B3.R" demora próximo de 4 horas para gerar as "listas".
 
+"avaliando_resultados_simulacoes.R" - Faz os gráficos baseado nos preços gerados para as opções comparando os modelos de precificação de opção utilizados.
+
 **Observação sobre os Preços simulados**
 
 -Os parametros do GARCH são definidos no "funcoes_para_os_testes.R" pela função gerador_das_simulacoes(). O modelo utilizado é o gjr GARCH que leva em conta choques assimétricos. Os parametros selecionados para o modelo foram: arma(2,2), GARCH(3,3) , média incluída e utilizando t-student como a distribuição dos choques. A seleção do modelo foi através de um grid search realizado nos hiperparametros ( ordem armar, ordem do garch, média inclusa ou não, distribuição utilizada ). Foi considerado todo o periodo de observação dos logs retornos dos preços ( no script "selecionando_garch_para_cada_acao.R" faço isso para 13 ações , no entanto só utilizo o resultado da PETR4 pois é o papel que estou estudando no momento. Uma melhora que estou trabalhando é de utilizar o MGARCH, que é uma versão multivariavel do GARCH.
