@@ -1,10 +1,6 @@
 library(dplyr)
 
 
-
-
-
-
 ##### Backtesting #####
 
 # parametros ####
@@ -42,7 +38,7 @@ carteira$portifolio$acoes <- carteira$portifolio$acoes[-1,]
 
 carteira$portifolio$acoes$data_compra <- as.Date(carteira$portifolio$acoes$data_compra)
 
-# criando carteira para cada estratégia
+# criando carteira para cada estratégia ######
 carteiras <- list()
 
 for( nome_estrategia in names(estrategias)){
@@ -57,13 +53,145 @@ for( nome_estrategia in names(estrategias)){
   logs_das_estrategias[[nome_estrategia]] <- data.frame(dia = as.Date(dias_de_trade[1]), ativo = 0, qtde = 0 , preco_no_dia = 0 , preco_ajustado = 0, tipo = 0 , strike = 0, prob_exerc = 0)
 }
 
+######
+
+# carregando arquivos com os dados gerados ######
+
+# CALLS ######
+
+id_arquivos <- rbind(c("2006-01-12","2013-02-19"),
+                        c("2013-02-19","2017-10-11"),
+                        c("2017-10-13","2020-01-23"))
+
+
+for (i in 1:3) {
+  if (i == 1){
+    ALL_CALLS <- readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+                                                                        id_arquivos[i,1],"_",id_arquivos[i,2],
+                                                                        ".RData"))
+    
+    ALL_CALLS <- readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+                                                                                id_arquivos[i,1],"_",id_arquivos[i,2],
+                                                                                ".RData"))
+    
+  } else {
+    
+    ALL_CALLS <- cbind(ALL_CALLS,
+                       readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+                                             id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
+    
+    ALL_CALLS <- cbind(ALL_CALLS,
+                       readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+                                             id_arquivoss[i,1],"_",id_arquivos[i,2],".RData")))
+  }
+}
 
 #####
 
-# usei pq esqueci de salvar os sigmas no salva dados , ja corrigi la !!!
-#teste <- data.frame(data = as.Date(ALL_CALLS$data), sigma = ALL_CALLS$sigma)
-#teste <- unique(teste)
-#Sigmas <- xts(teste$sigma, order.by = teste$data)
+
+# PUT #####
+
+for (i in 1:3) {
+  if (i == 1){
+    ALL_PUTS <- readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+                                       id_arquivos[i,1],"_",id_arquivos[i,2],
+                                       ".RData"))
+    
+    ALL_PUTS <- readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+                                       id_arquivos[i,1],"_",id_arquivos[i,2],
+                                       ".RData"))
+    
+  } else {
+    
+    ALL_PUTS <- cbind(ALL_PUTS,
+                       readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+                                             id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
+    
+    ALL_PUTS <- cbind(ALL_PUTS,
+                       readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+                                             id_arquivoss[i,1],"_",id_arquivos[i,2],".RData")))
+  }
+}
+
+######
+
+
+# Sigmas projetados ######
+
+id_arquivos <- rbind(c("2006-01-12","2013-02-19"),
+                     c("2013-02-19","2017-10-11"),
+                     c("2017-10-13","2020-01-23"))
+
+
+for (i in 1:3) {
+  if (i == 1){
+    Zigmas_teste <- readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+                                       id_arquivos[i,1],"_",id_arquivos[i,2],
+                                       ".RData"))
+    
+    Zigmas_teste <- readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+                                       id_arquivos[i,1],"_",id_arquivos[i,2],
+                                       ".RData"))
+    
+  } else {
+    
+    Zigmas_teste <- cbind(Zigmas_teste,
+                       readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+                                             id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
+    
+    Zigmas_teste <- cbind(Zigmas_teste,
+                       readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+                                             id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
+  }
+}
+
+#####
+
+
+# Retornos projetados ######
+
+id_arquivos <- rbind(c("2006-01-12","2013-02-19"),
+                     c("2013-02-19","2017-10-11"),
+                     c("2017-10-13","2020-01-23"))
+
+
+for (i in 1:3) {
+  if (i == 1){
+    retornos_simulados <- readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+                                          id_arquivos[i,1],"_",id_arquivos[i,2],
+                                          ".RData"))
+    
+    retornos_simulados <- readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+                                          id_arquivos[i,1],"_",id_arquivos[i,2],
+                                          ".RData"))
+    
+  } else {
+    
+    retornos_simulados <- cbind(retornos_simulados,
+                          readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+                                                id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
+    
+    retornos_simulados <- cbind(retornos_simulados,
+                          readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+                                                id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
+  }
+}
+
+#####
+
+
+
+#####
+
+# Carregando os Sigmas calculado por dia #####
+# TODO : salvar o objeto com o sigma calculado do dia
+# obs.: usei pq esqueci de salvar os sigmas no salva dados #####
+teste <- data.frame(data = as.Date(ALL_CALLS$data), sigma = ALL_CALLS$sigma)
+teste <- unique(teste)
+Sigmas <- xts(teste$sigma, order.by = teste$data)
+
+
+
 
 #### loop do backtesting ####
 
@@ -72,30 +200,24 @@ for( nome_estrategia in names(estrategias)){
 historico <- list()
 counter <- 1
 
+# Carregando as estratégias ####
+source(".//estrategias.R")
 
-#[1500:2500]
-#[2000:3000]
-#[2500:3500]
-#[3000:4000]
-#[3500:4500]
-#[3964:4964]
-
-
-dias_de_trade <- dias.de.trade[3964:4964]
-
-#source(".//estrategias/estrategias.R")
-
-# bugando nao sei por que
+# obs.: bugando nao sei por que, carregar manualmente !
 #source("funcoes_para_os_testes.R",encoding = "UTF-8")
 
-load("C:/Marco/Dados/Bolsa/Tudo junto/github/estados workspace/save_state_POS_final_backtesting_testando_estrategias.RData")
-save.image("C:/Marco/Dados/Bolsa/Tudo junto/github/estados workspace/save_state_PRE_backtesting_varios_anos.RData")
+# dias que ocorreram trade com PETR4 #####
+dias.de.trade <- as.Date(index(preco.acoes.nivel$PETR4$Preco_bruto))
+
+# dias que vão ser usados no Backtesting #####
+dias_de_trade <- dias.de.trade[1500:2500]
+
 
 #####
 
 # Loop Principal ####
-# 4 hrs pra rodar com 36 estrategias, 3.1 gb o objeto com todas as carteiras
-
+# 4 hrs para rodar com 36 estrategias, 3.1 gb o objeto com todas as carteiras
+# 12 hrs para rodar com 100 estrategias.
 
 for ( data in dias_de_trade){
   print(paste0("############ comeco : ",counter,": ",as.Date(data), " ##############" ) )
@@ -137,7 +259,7 @@ for ( data in dias_de_trade){
     # carteira <- gera_preco_para_opcoes_sem_volume("PETR4",data,simulacoes_em_nivel_corrigido,carteira,Zigma,SELIC)
     
     
-    # 8.4.1) realiza as liquidacoes pendentes a receber ####
+    # realiza as liquidacoes pendentes #####
     
     carteira$cash <- as.numeric(carteira$cash) + as.numeric(carteira$cash_d_1)
     
@@ -147,10 +269,16 @@ for ( data in dias_de_trade){
     
     carteira$cash_d_3 <- as.numeric(0)
     
-    # exerce as opcoes se for o caso
+    ######
+    
+    # exerce as opcoes se for o caso #####
     print("...Confere e faz os Exercicio das Opcoes ...")
     
-    # condicao para nao printar os logs de exercicios do log das opcoes ... ia ser uma cacetada
+    ######
+    
+    # [OLD] condicao para nao printar os logs de exercicios do log das opcoes ... ia ser uma cacetada
+    # TODO : corrigir , nao uso mais o "log_opcoes_precificacoes" no loop do backtesting
+    
     if( names(carteiras)[contador_de_carteiras] ==  "log_opcoes_precificacoes"){
       invisible(capture.output(carteira <- exercicio_de_opcoes_novo(data,carteira) ))
       invisible(capture.output(carteira <- fecha_posicao_descobertas_e_zeradas(data,carteira) ))
@@ -158,12 +286,15 @@ for ( data in dias_de_trade){
       
       carteira <- exercicio_de_opcoes_novo(data,carteira)
       
+      # acoes
       carteira <- fecha_posicao_descobertas_e_zeradas(data,carteira) 
-           
+      
+      # opcoes
       carteira <- fecha_posicao_zeradas_opcoes(data,carteira)
       debugador <- 3
     }
     
+    # zera a garantia caso não tenha put nem call
     if ( nrow(as.data.frame(carteira$portifolio$acoes)) == 0 & nrow(carteira$portifolio$calls) == 0 & nrow(carteira$portifolio$puts) == 0){
       carteira$garantia <- 0
     }
@@ -174,15 +305,16 @@ for ( data in dias_de_trade){
     carteira <- atualiza_dados_das_opcoes_em_carteira(data,carteira)
     debugador <- 4
     
-    # pra corrigir o erro que tem alguma funcao deletando o data frame e nao a linha
+    # para corrigir o erro que tem alguma funcao deletando o data frame e nao a linha
     #if( nrow(as.data.frame(carteira$portifolio$acoes)) == 0 ){
     #  
     #  carteira$portifolio$acoes <- data.frame(cbind(0,0,0,0,0,0) )
     #  colnames(carteira$portifolio$acoes) <- c( "data_compra" , "ativo" , "preco_compra" , "qtde" , "premios_recebidos" , "preco_do_ativo" )
     #  carteira$portifolio$acoes <-  carteira$portifolio$acoes[-1,]
     #}
-    # pra pegar onde que ta zuando o data.frame das acoes
     
+    # para pegar onde que esta zuando o data.frame das acoes
+   
     if ( is.character(carteira$portifolio$acoes) ){
       print(counter)
       # 
@@ -190,6 +322,7 @@ for ( data in dias_de_trade){
       break
     }
     debugador <- 5
+    
     # garante que o dinheiro é numeric
     
     carteira$cash <- as.numeric(carteira$cash)  
@@ -248,7 +381,7 @@ for ( data in dias_de_trade){
   
   PUTS_DIA2 <- ALL_PUTS[which((ALL_PUTS$data == data) ),]
   
-  # AUTORIZACAO PARA COMPRA
+  # AUTORIZACAO PARA COMPRA/VENDA por cada estrategia
   # TODO : generalizar para todas as acoes
   print("Estrategias:")
   for ( id_estrategia in names(estrategias)){
@@ -281,11 +414,6 @@ for ( data in dias_de_trade){
 }
 
 historico[[counter]] <- carteiras
-
-# pra tirar a carteira_1 q foi errado
-#for( i in 2:1001){
-#  historico[[i]] <- historico[[i]][-37]
-#}
 
 # salva o historico
 #saveRDS( historico , file = ".//dados backtesting/primeiro_backtesting_36_estrategias.RData") 
