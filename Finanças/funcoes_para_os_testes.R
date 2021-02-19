@@ -10,7 +10,7 @@ SELIC <- rbcb::get_series(c(SELIC = 1178),
 
 #### preços brutos e ajustados 
 
-preco.acoes.nivel <- readRDS("preco.acoes.nivel_preview.RData")
+preco.acoes.nivel <- readRDS(".//Formatando os Dados/preco.acoes.nivel_preview.RData")
 
 
 #### lista dos CALLS 
