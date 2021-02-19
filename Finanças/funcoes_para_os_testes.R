@@ -8,6 +8,11 @@ SELIC <- rbcb::get_series(c(SELIC = 1178),
                           as = "xts")
 
 
+#### preços brutos e ajustados 
+
+preco.acoes.nivel <- readRDS("preco.acoes.nivel_preview.RData")
+
+
 #### lista dos CALLS 
 
 # TODO : Generalizar para todas as ações
