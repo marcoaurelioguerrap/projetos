@@ -39,6 +39,17 @@ As imagens a seguir mostram os resultados dos preços projetados por cada modelo
 
 **Modelos para precificação utilizados**
 
--GARCH : A precificação das opções por GARCH calcula o preço esperado de uma opção baseado nos caminhos simulados pelo GARCH, São gerados 10000 caminhos para um horizonte de 120 dias. Dentre os modelos esse metódo de precificação foi o que apresentou a pior performance. Embora já identifiquei que existem periodos que as simulações estão meio esquisitas ( a média delas muda abruptamente de um dia para outro ), ainda preciso investigar melhor esses erros ( desconfio que seja algum problema por causa da memória cheia e o R fazendo coisas de R ). 
+--GARCH : A precificação das opções por GARCH calcula o preço esperado de uma opção baseado nos caminhos simulados pelo GARCH, São gerados 10000 caminhos para um horizonte de 120 dias. Dentre os modelos esse metódo de precificação foi o que apresentou a pior performance. Embora já identifiquei que existem periodos que as simulações estão meio esquisitas ( a média delas muda abruptamente de um dia para outro ), ainda preciso investigar melhor esses erros ( desconfio que seja algum problema por causa da memória cheia e o R fazendo coisas de R ). 
 
--Binomial : 
+Obs.: os modelos a seguir foram calculados por funções do pacote fOptions.
+
+--CRR : Modelo Binomial desenvolvido por Cox, Ross e Rubistein (1979);
+--JR : Modelo Binomial de Jarrow and Rudd (1983);
+--TIAN : Modelo Binomial de Tian (1993);
+
+--GBS : Black-Scholes padrão;
+
+--BAW : Aproximação de preço para opção americana baseado em Barone-Adesi and Whaley (1987);
+--BSA : Aproximação de preço para opção americana baseado em Bjerksund and Stensland (1993);
+
+
