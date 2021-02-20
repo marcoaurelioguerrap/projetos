@@ -1,0 +1,1 @@
+**Dados Gerados Pelo BACKTESTING**
