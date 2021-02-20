@@ -381,7 +381,7 @@ for ( data in dias_de_trade){
   
   PUTS_DIA2 <- ALL_PUTS[which((ALL_PUTS$data == data) ),]
   
-  # AUTORIZACAO PARA COMPRA/VENDA por cada estrategia
+  # REALIZAÇÃO DAS OPERAÇÕES DE CADA ESTRATÉGIAS ######
   # TODO : generalizar para todas as acoes
   print("Estrategias:")
   for ( id_estrategia in names(estrategias)){
@@ -389,7 +389,7 @@ for ( data in dias_de_trade){
     estrategias[[id_estrategia]](CALLS_DIA2,PUTS_DIA2,carteiras[[id_estrategia]], Fator_correcao_TEMPORARIO)
   }
   
-  # @!@TESTANDO: SALVA LOGS DAS ESTRATEGIAS
+  # SALVA LOGS DAS ESTRATEGIAS
   for ( id_estrategia in names(logs_das_estrategias)){
     
     
@@ -399,17 +399,9 @@ for ( data in dias_de_trade){
   }
   
   
-  # atualizando os parametros das opcoes na carteira
-  
-  
-  
-  #estrategia_1(CALLS_DIA,PUTS_DIA,carteira, Fator_correcao_TEMPORARIO )
-  
-  #estrategia_2(CALLS_DIA,PUTS_DIA,carteira, Fator_correcao_TEMPORARIO )
-  
   counter <- counter + 1
-  #print(carteiras[[2]])
-  #print(paste0( "Saldo : ", carteira$cash + try((carteira$portifolio$acoes$qtde %*% carteira$portifolio$acoes$preco_compra)) ))
+  
+  
   print("##############  ...do dia... ############")
 }
 
@@ -423,16 +415,18 @@ historico[[counter]] <- carteiras
 
 #####
 
-# salvando o historico #####
+# salvando o historico das performances de cada estratégia #####
 
 # montando o indice de performance do papel #####
 
+# retorno da acao
 d_acao <- returns_qrmtools(preco.acoes.nivel$PETR4$Preco_ajustado[dias_de_trade] )
 
 d_acao <- as.xts(d_acao )
 
 #d_acao <- d_acao[1:length(dias_de_trade)-2]
 
+# indice da acao
 indice_acao <- as.data.frame( returns_qrmtools(as.numeric(d_acao),inverse = TRUE, start = 100) )
 
 #indice_acao <- returns_qrmtools(as.numeric(d_acao),inverse = TRUE, start = 100) 
@@ -443,16 +437,15 @@ colnames(indice_acao) <- c("indice_acao")
 
 indice_acao <- as.xts(indice_acao)
 
-#####
-#teste <- as.data.frame(historico)
 retorno_indices_performance <- d_acao
+
 indices_performance <- indice_acao
+
+##### Loop para pegar os historicos de cada estratégia #######
 
 for ( id_estrategia in 1:length(names(estrategias)) ){
   
-  #df.historico[,2][[1]][[2]]$dia
-
-  
+  # transforma a lista em um data.frame
   df.historico <- data.frame(t(sapply(historico,c)))
   df.historico <- data.frame(t(sapply(df.historico[,id_estrategia],c)))
   df.historico <- df.historico[-1,]
@@ -468,7 +461,7 @@ for ( id_estrategia in 1:length(names(estrategias)) ){
     
     df.historico[i,'teve_call'] <- nrow(df.historico[i,]$portifolio[[1]]$calls)
     
-    # PL vanilla
+    #####  PL - Patrimonio só com os preços dos dados da B3 ( opções sem liquidez tem o ultimo preço de fechamento ) #######
     df.historico[i, 'PL'] <- ((as.numeric(df.historico$portifolio[[i]]$acoes$preco_atual) %*% as.numeric(df.historico$portifolio[[i]]$acoe$qtde)) + df.historico$cash[[i]] +
                                 df.historico$cash_d_1[[i]] + df.historico$cash_d_2[[i]] + df.historico$cash_d_3[[i]]  )
     
@@ -477,6 +470,7 @@ for ( id_estrategia in 1:length(names(estrategias)) ){
     # TODO : generalizar pra varias acoes
     
     #tryCatch(cbind(historico[[i]]$estrategia_3$portifolio$acoes$preco_atual,historico[[i]]$estrategia_3$portifolio$calls$strike) , error = function(c) FALSE) 
+    # Se o preco da aCAO esta a cima do STRIKE de uma CALL coberta, o preço considerado é o STRIKE do CALL
     if ( nrow(df.historico$portifolio[[i]]$calls) != 0){
       preco_strike_min <- cbind(df.historico$portifolio[[i]]$acoes$preco_atual,
                                 as.numeric(df.historico$portifolio[[i]]$calls$strike[which(df.historico$portifolio[[i]]$calls$qtde < 0)]))
@@ -579,6 +573,8 @@ for ( id_estrategia in 1:length(names(estrategias)) ){
   
   indice_estrategia <- as.xts(indice_estrategia)
   
+  # Juntando os indices calculados para cada estratégia                          
+                           
   retorno_indices_performance <- cbind(retorno_indices_performance,d_estrategia)
   
   indices_performance <- cbind(indices_performance,indice_estrategia)
@@ -586,10 +582,6 @@ for ( id_estrategia in 1:length(names(estrategias)) ){
   #plot.xts(cbind(indice_acao, indice_estrategia ) )
   
 }
-
-
-
-# [-1] é por causa do erro que a primeira carteira eu nao coloquei o log certo la na funcao dela
 
 colnames(indices_performance) <- c('Papel_base',names(estrategias))
 colnames(retorno_indices_performance) <- c('Papel_base',names(estrategias))
@@ -611,6 +603,8 @@ saveRDS(indices_performance,file = paste0(".//estrategias/dados testes/indices_p
 saveRDS(retorno_indices_performance,file = paste0(".//estrategias/dados testes/retorno_indices_performance_final_",first(names(estrategias)),"_",
                                           last(names(estrategias)),".RData"))
 
+                           
+# TODO : Retirar essa parte final !                           
 # carregando todas estrategias
 
 grupo_estrategia <- rbind(c("estrategia_1_1","estrategia_9_4"),
@@ -640,15 +634,7 @@ retorno_indices_performance <- retorno_indices_performance[-1000,]
 
 
 
-#colMeans(retorno_indices_performance)/colStdevs(retorno_indices_performance)
 
-#library(PerformanceAnalytics)
-
-# geometrico: cr = 1 * (1 + i1)(1 + i2)...(1+in) - 1 , nao geometrico: cr = i1 + i2 + ... + in
-# geometric não é colocado pois  o benchmark possuem um investimento inicial só, ou seja , BUY n HOLD petr4. A carteira o reinvestimento
-# nao é continuo.
-# https://stackoverflow.com/questions/54781972/geometric-argument-of-chart-cumreturns-function
-# 
 charts.PerformanceSummary(R = cbind(retorno_indices_performance[,1], retorno_indices_performance[,which(as.numeric(SortinoRatio(retorno_indices_performance) > .07)==1)]), geometric = FALSE)
 
 
