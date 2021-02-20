@@ -28,9 +28,10 @@ carteira <- list(dia = as.Date("2004-02-17"),
                  
                  log = data.frame(dia = as.Date(dias.de.trade[1]), ativo = 0, qtde = 0 , preco_no_dia = 0 , preco_ajustado = 0, tipo = 0 , strike = 0, prob_exerc = 0) ) 
 
-# antigo , testando ainda o novo
+# Antigo
 #colnames(carteira$portifolio$acoes) <- c( "data_compra" , "ativo" , "preco_compra" , "qtde" , "premios_recebidos" , "preco_do_ativo" )
 
+# Novo formato. _original serve para calcular os preços ajustados após um ajuste
 colnames(carteira$portifolio$acoes) <- c('data_compra', 'ativo', 'preco_compra', 'qtde', 'premios_recebidos' , 'preco_do_ativo','preco_compra_original', 'qtde_original',
   'preco_original','preco_atual' )
 
@@ -186,12 +187,11 @@ for (i in 1:3) {
 # Carregando os Sigmas calculado por dia #####
 # TODO : salvar o objeto com o sigma calculado do dia
 # obs.: usei pq esqueci de salvar os sigmas no salva dados #####
-teste <- data.frame(data = as.Date(ALL_CALLS$data), sigma = ALL_CALLS$sigma)
-teste <- unique(teste)
-Sigmas <- xts(teste$sigma, order.by = teste$data)
+pegando_sigma <- data.frame(data = as.Date(ALL_CALLS$data), sigma = ALL_CALLS$sigma)
+pegando_sigma <- unique(pegando_sigma)
+Sigmas <- xts(pegando_sigma$sigma, order.by = pegando_sigma$data)
 
-
-
+rm(pegando_sigma)
 
 #### loop do backtesting ####
 
@@ -216,8 +216,14 @@ dias_de_trade <- dias.de.trade[1500:2500]
 #####
 
 # Loop Principal ####
-# 4 hrs para rodar com 36 estrategias, 3.1 gb o objeto com todas as carteiras
-# 12 hrs para rodar com 100 estrategias.
+# 4 hrs para rodar com 36 estrategias em 1000 dias de trade, 3.1 gb o objeto com todas as carteiras
+# 12 hrs para rodar com 100 estrategias em 1000 dias de trade.
+
+# separa as estrategias que vão ser usadas  ######
+# TODO : fazer o loop a cima desse para cada grupo de estrategia ( estrategias_1, estrategias_2 ,estrategias_3 )
+estrategias <- estrategias_1
+
+#####
 
 for ( data in dias_de_trade){
   print(paste0("############ comeco : ",counter,": ",as.Date(data), " ##############" ) )
@@ -225,11 +231,9 @@ for ( data in dias_de_trade){
   #### @@@ generalizar para as estrategias @@@ ####
   # salva o historico
   historico[[counter]] <- carteiras
-  
-  
+    
   logs_das_estrategias <- logs_das_estrategias
-  
-  
+    
   data <- as.Date(data)
   
   # atualiza os precos
@@ -250,15 +254,13 @@ for ( data in dias_de_trade){
     carteira <- atualiza_precos_acoes_e_opcoes(data,carteira)
     debugador <- 2
     # TODO : generalizar por acao
-    # TODO : fazer update nos precos simulados tb
-    
+        
     Zigma <- as.numeric(Sigmas[data])
     
     # PROBLEMA, CONFERIR SE ESTA USANDO A SIMULACAO DA DATA CERTA, ACHO Q TO USANDO DO DIA ANTERIOR
     
     # carteira <- gera_preco_para_opcoes_sem_volume("PETR4",data,simulacoes_em_nivel_corrigido,carteira,Zigma,SELIC)
-    
-    
+        
     # realiza as liquidacoes pendentes #####
     
     carteira$cash <- as.numeric(carteira$cash) + as.numeric(carteira$cash_d_1)
@@ -344,32 +346,9 @@ for ( data in dias_de_trade){
   
   #### Essa parte nao depende da carteira!!! ####
   
-  
-  # ta definido aqui , mas devo mudar provavelment
+  # ta definido aqui , mas devo mudar provavelmente
   n.acao <- "PETR4"
-  
-  # separa os retornos para a funçao geradora das probabilidades , SÓ PETROBRAS
-  # TODO : definir os retornos na aqui dentro pra poder generalizar para uma funcao
-  #retornos.rolling <- tail( retornos[paste0("/",data)] , tamanho_da_amostra_para_regressão )
-  
-  # separa as datas que serão utilizadas nos labels da simulação 
-  #datas_de_trade_simulado <- as.character(dia.de.trade[( which( dia.de.trade == data ) + 1 ):( which( dia.de.trade == data ) + n ) ])
-  
-  #print("...gerando as simulacoes...")
-  # gerador das simulacoes
-  # TODO : colocar isso fora da estratégia, acho que vou rodar para todas as datas mesmo .... 
-  #gerador_das_simulacoes(retornos.rolling , datas_de_trade_simulado , n, m , data ) 
-  
-  #print("...calculando as probabilidades...")
-  # gerador das probabilidades
-  #gerador_das_probabilidades_de_exercicio(n.acao,
-  #                                        data,
-  #                                        simulacoes_em_nivel_para_prob, 
-  #                                        temp.calls[which(temp.calls$`DATA DO PREGÃO` == data),],
-  #                                        temp.puts[which(temp.puts$`DATA DO PREGÃO` == data),] )
-  
-  ####
-  
+    
   # pegando os CALLS_DIAS e PUTS_DIA que possuem preco no dia
   print("... Carregando os CALLS_DIA e PUTS_DIA ...")
   
@@ -606,7 +585,7 @@ saveRDS(retorno_indices_performance,file = paste0(".//estrategias/dados testes/r
                            
 # TODO : Retirar essa parte final !                           
 # carregando todas estrategias
-
+'''
 grupo_estrategia <- rbind(c("estrategia_1_1","estrategia_9_4"),
                             c("estrategia_10_1","estrategia_16_6"),
                             c("estrategia_17_1","estrategia_22_6" ))
@@ -617,6 +596,10 @@ indices_performance <- c(indice_acao)
 colnames(retorno_indices_performance) <- "Underlying Asset"
 colnames(indices_performance) <- "Underlying Asset"
 
+# Parte utilizada para agrupar as estrategias_1, estrategias_2 , estrategias_3.   
+# Obs.: o código está fazendo o loop em cada estratégia de maneira não automatica, ou seja, em estrategias <- estrategias_1 é necessário rodar o loop principal para 
+# estrategias_1, estrategias_2 , estrategias_3 para testar as 100 estratégias separadas.                          
+                           
 for ( i in 1:3){
 
   indices_performance <- cbind(indices_performance,readRDS(file = paste0(".//estrategias/dados testes/indices_performance_final_",grupo_estrategia[i,1],"_",
@@ -627,7 +610,7 @@ for ( i in 1:3){
   
 }
 
-
+'''
 retorno_indices_performance <- retorno_indices_performance[-1000,]
 
 
