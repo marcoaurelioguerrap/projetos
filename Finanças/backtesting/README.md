@@ -7,3 +7,29 @@ obs.: Foram utilizadas 110 estratégias. por limitação de memória dividi em t
 
 "estrategias.R" - Usado para definir as estratégias utilizadas. O arquivo tem em torno de 25 mil linhas, inclui os marcadores ##### (pode fazer "colapse" das linhas) a cada grupo de estratégia para facilitar a leitura no RStudio.
 
+
+Resultados
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Scatter%20plot%20Risco_Retorno.png)
+
+Indicadores
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Indicadores%202006%20estrategias%20selecionadas.png)
+
+VaR
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/VaR%202006%20estrategias%20selecionadas.png)
+
+ES
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/ES%202006%20estrategias%20selecionadas.png)
+
+Performance e Drawdown
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Retorno%202006%20est_selec%201_5.png)
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/retornos%20est_selec%206_10.png)
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/retornos%20est_selec%2011_15.png)
+
+![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/retorno%20est_selec%2016_23.png)
