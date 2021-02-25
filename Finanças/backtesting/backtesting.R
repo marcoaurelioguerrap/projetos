@@ -11,7 +11,16 @@ tamanho_da_amostra_para_regressão <- 1000 # as ultimas observacoes utilizadas n
 
 #####
 
+# grupo de estrategias usadas #####
+# obs.: são definidas no "estrategias.R" rodar ele antes
 
+estrategias <- estrategias_1
+
+#estrategias <- estrategias_2
+
+#estrategias <- estrategias_3
+
+####
 
 # criando carteira ####
 
