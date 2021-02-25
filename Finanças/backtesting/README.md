@@ -7,6 +7,8 @@ obs.: Foram utilizadas 110 estratégias. por limitação de memória dividi em t
 
 "estrategias.R" - Usado para definir as estratégias utilizadas. O arquivo tem em torno de 25 mil linhas, inclui os marcadores ##### (pode fazer "colapse" das linhas) a cada grupo de estratégia para facilitar a leitura no RStudio.
 
+"avaliando_resultados_backtesting.R" - Utiliza os arquivos indices_performance_final_"*"_"*".RData e retornos_indices_performance_final_"*"_"*".RData para criar os gráficos utilizados abaixo.
+
 
 **Resultados**
 
