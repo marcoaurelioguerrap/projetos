@@ -25,12 +25,15 @@ A tabela a seguir contêm alguns indicadores para auxiliar na avaliação das es
 **VaR**
 
 Value at Risk<sub>&alpha;</sub>(-Log Retornos) - VaR<sub>&alpha;</sub>(-Log Retornos) é uma medida de risco que é definida como o quantil $alpha da distribuição acumulada dos logs retornos negativos. VaR<sub>&alpha;</sub>(-Log Retornos) é a menor perda a qual é excedida com probabilidade até 1-&alpha; ( Embrechts et al, 2015 ). Para calcular o VaR<sub>&alpha;</sub> é necessário uma distribuição acumulada, essa distribuição pode ser analitica ( ex.: pega se a média e desvio padrão do retornos historicos e se obtém uma distribuição normal(&mu;,&sigma;) ) , uma segunda maneira é utilizando a distruição histórica ( ex.: observa-se a distribuição acumulada históricamente ) e por último é a estimação por Monte Carlo. Cada um desses métodos possui vantagens e desvantagens. A tabela abaixo mostra o VaR<sub>&alpha;</sub> calculado para &alpha; = {.95 , .99} e diferentes métodos. O método análitico foi omitido pois o resultado é próximo ao método Monte Carlo. É possivel calcular o VaR<sub>&alpha;</sub>(-retornos) de forma dinâmica e condicional, VaR<sub>&alpha;</sub>(-retornos<sub>t</sub>|-retornos<sub>t-1:t-&delta;</sub>). Os calculos a baixo são feitos de forma não condicional.
+obs.: os valores NaN e 1 ocorrem quando não há convergência na estimação dos parametros da distribuição. 
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/VaR%202006%20estrategias%20selecionadas.png)
+
 
 **ES**
 
 Expected Shortfall<sub>&alpha;</sub>(-Log Retornos) - ES<sub>&alpha;</sub>(-Log Retornos) é a média do VaR<sub>&mu;</sub> para todo &mu; > &alpha;. O calculo do ES<sub>&alpha;</sub>(-Log Retornos) também possui uma forma analitica, historica e por Monte Carlo. A tabela abaixo mostra o ES<sub>&alpha;</sub> calculado para &alpha; = {.95 , .99} e diferentes métodos.
+obs.: os valores NaN e 1 ocorrem quando não há convergência na estimação dos parametros da distribuição. 
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/ES%202006%20estrategias%20selecionadas.png)
 
