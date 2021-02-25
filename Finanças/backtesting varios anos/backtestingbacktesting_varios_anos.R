@@ -1,7 +1,4 @@
 
-save.image("C:/Marco/Dados/Bolsa/Tudo junto/github/estados workspace/save_state_PRE_backtesting_varios_anos.RData")
-#load("C:/Marco/Dados/Bolsa/Tudo junto/github/estados workspace/save_state_POS_final_backtesting_testando_estrategias.RData")
-
 ##### carregando os dados das simulacoes ##### 
 # CALLS
 ALL_CALLS <- readRDS('.//dados backtesting/ALL_CALLS_120_final_2006-01-12_2013-02-19.RData')
