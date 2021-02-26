@@ -515,13 +515,13 @@ for (janela in janelas[1:5] ) {
     
     # salvando os resultados do backresting
     
-    saveRDS(logs_das_estrategias,file = paste0(".//estrategias/dados testes/logs_das_estrategias_varios_anos_",first(janela),".RData"))
+    saveRDS(logs_das_estrategias,file = paste0(".//dados testes/logs_das_estrategias_varios_anos_",first(janela),".RData"))
     
-    saveRDS(historico,file = paste0(".//estrategias/dados testes/historico_varios_anos_",first(janela),".RData"))
+    saveRDS(historico,file = paste0(".//dados testes/historico_varios_anos_",first(janela),".RData"))
     
-    saveRDS(indices_performance,file = paste0(".//estrategias/dados testes/indices_performance_varios_anos_",first(janela),".RData"))
+    saveRDS(indices_performance,file = paste0(".//dados testes/indices_performance_varios_anos_",first(janela),".RData"))
     
-    saveRDS(retorno_indices_performance,file = paste0(".//estrategias/dados testes/retorno_indices_performance_varios_anos_",first(janela),
+    saveRDS(retorno_indices_performance,file = paste0(".//dados testes/retorno_indices_performance_varios_anos_",first(janela),
                                                       ".RData"))
     
   
