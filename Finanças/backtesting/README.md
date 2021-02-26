@@ -41,8 +41,6 @@ obs.: os valores NaN e 1 ocorrem quando não há convergência na estimação do
 
 No gráfico a seguir são apresentados as performances e os Drawdown para estratégias selecionadas.
 
-<img align="center" src="https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Retorno%202006%20est_selec%201_5.png">
-
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Retorno%202006%20est_selec%201_5.png)
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/retornos%20est_selec%206_10.png)
