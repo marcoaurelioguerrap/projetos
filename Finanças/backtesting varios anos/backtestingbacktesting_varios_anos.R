@@ -2,14 +2,14 @@
 ##### carregando os dados das simulacoes ##### 
 
 # CALLS
-ALL_CALLS <- readRDS('.//dados backtesting/ALL_CALLS_120_final_2006-01-12_2013-02-19.RData')
-ALL_CALLS <- rbind(ALL_CALLS,readRDS('.//dados backtesting/ALL_CALLS_120_final_2013-02-19_2017-10-11.RData'))
-ALL_CALLS <- rbind(ALL_CALLS,readRDS('.//dados backtesting/ALL_CALLS_120_final_2017-10-13_2020-01-23.RData'))
+ALL_CALLS <- readRDS('.//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_2006-01-12_2013-02-19.RData')
+ALL_CALLS <- rbind(ALL_CALLS,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_2013-02-19_2017-10-11.RData'))
+ALL_CALLS <- rbind(ALL_CALLS,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_2017-10-13_2020-01-23.RData'))
 
 # PUTS
-ALL_PUTS <- readRDS('.//dados backtesting/ALL_PUTS_120_final_2006-01-12_2013-02-19.RData')
-ALL_PUTS <- rbind(ALL_PUTS,readRDS('.//dados backtesting/ALL_PUTS_120_final_2013-02-19_2017-10-11.RData'))
-ALL_PUTS <- rbind(ALL_PUTS,readRDS('.//dados backtesting/ALL_PUTS_120_final_2017-10-13_2020-01-23.RData'))
+ALL_PUTS <- readRDS('.//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_2006-01-12_2013-02-19.RData')
+ALL_PUTS <- rbind(ALL_PUTS,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_2013-02-19_2017-10-11.RData'))
+ALL_PUTS <- rbind(ALL_PUTS,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_2017-10-13_2020-01-23.RData'))
 
 ALL_CALLS <- ALL_CALLS[!duplicated(ALL_CALLS[,c('data','ativo')]),]
 ALL_PUTS <- ALL_PUTS[!duplicated(ALL_PUTS[,c('data','ativo')]),]
@@ -22,18 +22,18 @@ ALL_PUTS <- ALL_PUTS[!duplicated(ALL_PUTS[,c('data','ativo')]),]
 
 
 # Retornos
-retornos_simulados <- readRDS('.//dados backtesting/retornos_simulados_final_2006-01-12_2013-02-19.RData')
-retornos_simulados <- rbind(retornos_simulados,readRDS('.//dados backtesting/retornos_simulados_final_2013-02-19_2017-10-11.RData'))
-retornos_simulados <- rbind(retornos_simulados,readRDS('.//dados backtesting/retornos_simulados_final_2017-10-13_2020-01-23.RData'))
+retornos_simulados <- readRDS('.//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_2006-01-12_2013-02-19.RData')
+retornos_simulados <- rbind(retornos_simulados,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_2013-02-19_2017-10-11.RData'))
+retornos_simulados <- rbind(retornos_simulados,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_2017-10-13_2020-01-23.RData'))
 
 dias <- retornos_simulados[which(rowMeans(retornos_simulados) ==0), ]
 
 retornos_simulados <- retornos_simulados[which(rowMeans(retornos_simulados)!= 0), ]
 
 # Sigmas
-Zigmas_forcasted_todos <- readRDS('.//dados backtesting/Zigmas_forcasted_todos_final_2006-01-12_2013-02-19.RData')
-Zigmas_forcasted_todos <- rbind(Zigmas_forcasted_todos,readRDS('.//dados backtesting/Zigmas_forcasted_todos_final_2013-02-19_2017-10-11.RData'))
-Zigmas_forcasted_todos <- rbind(Zigmas_forcasted_todos,readRDS('.//dados backtesting/Zigmas_forcasted_todos_final_2017-10-13_2020-01-23.RData'))
+Zigmas_forcasted_todos <- readRDS('.//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_2006-01-12_2013-02-19.RData')
+Zigmas_forcasted_todos <- rbind(Zigmas_forcasted_todos,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_2013-02-19_2017-10-11.RData'))
+Zigmas_forcasted_todos <- rbind(Zigmas_forcasted_todos,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_2017-10-13_2020-01-23.RData'))
 
 dias <- Zigmas_forcasted_todos[which(rowMeans(Zigmas_forcasted_todos[,1:3]) ==0), ]
 
@@ -43,9 +43,9 @@ Zigmas_forcasted_todos <- Zigmas_forcasted_todos[which((rowMeans(Zigmas_forcaste
 
 # convergiu ou nao o GARCH
 
-nao_convergiu <- readRDS('.//dados backtesting/nao_convergiu_final_2006-01-12_2013-02-19.RData')
-nao_convergiu <- rbind(nao_convergiu,readRDS('.//dados backtesting/nao_convergiu_final_2013-02-19_2017-10-11.RData'))
-nao_convergiu <- rbind(nao_convergiu,readRDS('.//dados backtesting/nao_convergiu_final_2017-10-13_2020-01-23.RData'))
+nao_convergiu <- readRDS('.//Gerando Dados para o Backtesting/dados backtesting/nao_convergiu_final_2006-01-12_2013-02-19.RData')
+nao_convergiu <- rbind(nao_convergiu,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/nao_convergiu_final_2013-02-19_2017-10-11.RData'))
+nao_convergiu <- rbind(nao_convergiu,readRDS('.//Gerando Dados para o Backtesting/dados backtesting/nao_convergiu_final_2017-10-13_2020-01-23.RData'))
 
 # length(dias.de.trade[3500:4964])
 # pegando o sigma observado! esqueci de salvar no loop :( 
