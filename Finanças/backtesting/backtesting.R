@@ -579,16 +579,16 @@ retorno_indices_performance <- retorno_indices_performance[-1000,]
 #charts.PerformanceSummary(R = retorno_indices_performance, geometric = FALSE)
 # salvando os resultados do backresting
 
-saveRDS(logs_das_estrategias,file = paste0(".//estrategias/dados testes/logs_das_estrategias_final_",first(names(estrategias)),"_",
+saveRDS(logs_das_estrategias,file = paste0(".//dados testes/logs_das_estrategias_final_",first(names(estrategias)),"_",
                                            last(names(estrategias)),".RData"))
 
-saveRDS(historico,file = paste0(".//estrategias/dados testes/historico_final_",first(names(estrategias)),"_",
+saveRDS(historico,file = paste0(".//dados testes/historico_final_",first(names(estrategias)),"_",
                                            last(names(estrategias)),".RData"))
 
-saveRDS(indices_performance,file = paste0(".//estrategias/dados testes/indices_performance_final_",first(names(estrategias)),"_",
+saveRDS(indices_performance,file = paste0(".//dados testes/indices_performance_final_",first(names(estrategias)),"_",
                                 last(names(estrategias)),".RData"))
 
-saveRDS(retorno_indices_performance,file = paste0(".//estrategias/dados testes/retorno_indices_performance_final_",first(names(estrategias)),"_",
+saveRDS(retorno_indices_performance,file = paste0(".//dados testes/retorno_indices_performance_final_",first(names(estrategias)),"_",
                                           last(names(estrategias)),".RData"))
 
                            
