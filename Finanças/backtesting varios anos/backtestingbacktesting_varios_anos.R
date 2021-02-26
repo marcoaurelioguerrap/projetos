@@ -1,5 +1,6 @@
 
 ##### carregando os dados das simulacoes ##### 
+
 # CALLS
 ALL_CALLS <- readRDS('.//dados backtesting/ALL_CALLS_120_final_2006-01-12_2013-02-19.RData')
 ALL_CALLS <- rbind(ALL_CALLS,readRDS('.//dados backtesting/ALL_CALLS_120_final_2013-02-19_2017-10-11.RData'))
@@ -48,29 +49,29 @@ nao_convergiu <- rbind(nao_convergiu,readRDS('.//dados backtesting/nao_convergiu
 
 # length(dias.de.trade[3500:4964])
 # pegando o sigma observado! esqueci de salvar no loop :( 
-2012-11-01
+
 Sigmas2 <- unique(ALL_CALLS[,c('data','sigma')])
 
 interpolacao <- data.frame(data = '2017-10-11',sigma = as.numeric(0.2495002) )
 
-"##############  ...do dia... ############"
- "############ comeco : 683: 2012-11-01 ##############"
+
+# Por causa da divisão do ALL_CALLS e ALL_PUTS teve um dia que ficou sem sigma calculado 
 interpolacao <- rbind(interpolacao, data.frame(data = '2012-11-01', sigma = as.numeric(0.4240721)))
 
-2012-11-01
 
 Sigmas2 <- rbind(Sigmas2,interpolacao)
 
 Sigmas2 <- xts(Sigmas2$sigma , order.by = Sigmas2$data)
 
-Sigmas2['2017-10-11',]
+#Sigmas2['2017-10-11',]
 
 Sigmas <- Sigmas2
 
 #####
 
-
-dias.de.trade <- View(dias.de.trade[-which(dias.de.trade == '2017-10-11')])
+# tirei o dia 2017-10-11 por causa da divisão dos ALL_CALLS e ALL_PUTS... mais para frente vou gerar isso em um arquivo só
+# com isso poderei tirar esse remendo.
+dias.de.trade <- dias.de.trade[-which(dias.de.trade == '2017-10-11')]
 
 ##### Backtesting #####
 janelas = list( 
@@ -80,25 +81,24 @@ janelas = list(
                 dias.de.trade[3000:4000],
                 dias.de.trade[3500:4500],
                 dias.de.trade[3964:4962])
-anos
-
-dias.de.trade[1500:2500]
-
-for (estrategias in estrategiass) {
-  
-  estrategias[[names(estrategias)[1]]]()
-  print(names(estrategias))
-}
 
 
+estrategias <- estrategias_melhores
 
 
 ALL_CALLS <- ALL_CALLS[!duplicated(ALL_CALLS[,c('data','ativo')]),]
 ALL_PUTS <- ALL_PUTS[!duplicated(ALL_PUTS[,c('data','ativo')]),]
 
 
-# parametros ####
-for (janela in janelas[4:5] ) {
+# Inicio do Loop principal ######
+# Esse loop itera o backtesting de estrategias selecionadas sobre diferentes janelas ( 2006-2010, 2008-2012 , etc )
+
+#######################################
+# OBS.:DEMORA 6 horas para rodar tudo #
+#######################################
+
+
+for (janela in janelas[1:5] ) {
 
     print('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ COMECANDO a JANELA @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@')
     print(first(janela))
@@ -131,15 +131,8 @@ for (janela in janelas[4:5] ) {
                      
                      log = data.frame(dia = as.Date(dias.de.trade[1]), ativo = 0, qtde = 0 , preco_no_dia = 0 , preco_ajustado = 0, tipo = 0 , strike = 0, prob_exerc = 0) ) 
     
-    # antigo , testando ainda o novo
-    #colnames(carteira$portifolio$acoes) <- c( "data_compra" , "ativo" , "preco_compra" , "qtde" , "premios_recebidos" , "preco_do_ativo" )
-    
-    #colnames(carteira$portifolio$acoes) <- c('data_compra', 'ativo', 'preco_compra', 'qtde', 'premios_recebidos' , 'preco_do_ativo','preco_compra_original', 'qtde_original',
-    #                                         'preco_original','preco_atual' )
-    
+    # Tirando a linha de 0's
     carteira$portifolio$acoes <- carteira$portifolio$acoes[-1,]
-    
-    #carteira$portifolio$acoes$data_compra <- as.Date(carteira$portifolio$acoes$data_compra)
     
     # criando carteira para cada estratégia
     carteiras <- list()
@@ -187,7 +180,7 @@ for (janela in janelas[4:5] ) {
       
       data <- as.Date(data)
       
-      # atualiza os precos
+      # atualiza os precos por carteira
       print('...Atualizando os precos...')
       contador_de_carteiras <- 1
       debugador <- 1
@@ -250,16 +243,7 @@ for (janela in janelas[4:5] ) {
         print("...Atualizando dados das opcoes em carteira")
         carteira <- atualiza_dados_das_opcoes_em_carteira(data,carteira)
         debugador <- 4
-        
-        # pra corrigir o erro que tem alguma funcao deletando o data frame e nao a linha
-        #if( nrow(as.data.frame(carteira$portifolio$acoes)) == 0 ){
-        #  
-        #  carteira$portifolio$acoes <- data.frame(cbind(0,0,0,0,0,0) )
-        #  colnames(carteira$portifolio$acoes) <- c( "data_compra" , "ativo" , "preco_compra" , "qtde" , "premios_recebidos" , "preco_do_ativo" )
-        #  carteira$portifolio$acoes <-  carteira$portifolio$acoes[-1,]
-        #}
-        # pra pegar onde que ta zuando o data.frame das acoes
-        
+        # checa se tem alguma doideira no data.frame de ações ( para DEBUG isso )
         if ( is.character(carteira$portifolio$acoes) ){
           print(counter)
           # 
@@ -323,8 +307,7 @@ for (janela in janelas[4:5] ) {
       #  Zigmas_forcasted_todos[data,3]<- Zigmas_forcasted_todos[data,2]
       #}
       
-      
-      
+      # Executa cada estratégia
       for ( id_estrategia in names(estrategias)){
         print(id_estrategia)
         estrategias[[id_estrategia]](CALLS_DIA2,PUTS_DIA2,carteiras[[id_estrategia]], Fator_correcao_TEMPORARIO)
@@ -341,16 +324,9 @@ for (janela in janelas[4:5] ) {
       
       
       # atualizando os parametros das opcoes na carteira
-      
-      
-      
-      #estrategia_1(CALLS_DIA,PUTS_DIA,carteira, Fator_correcao_TEMPORARIO )
-      
-      #estrategia_2(CALLS_DIA,PUTS_DIA,carteira, Fator_correcao_TEMPORARIO )
-      
+
       counter <- counter + 1
-      #print(carteiras[[2]])
-      #print(paste0( "Saldo : ", carteira$cash + try((carteira$portifolio$acoes$qtde %*% carteira$portifolio$acoes$preco_compra)) ))
+
       print("##############  ...do dia... ############")
     }
     
@@ -498,17 +474,16 @@ for (janela in janelas[4:5] ) {
       row.names(df.historico) <- as.numeric(row.names(df.historico))-1
       
       
-      
+      # os PL_{1,2,3,4,5} são maneiras diferentes de calcular o Patrimonio da carteira. PL_5 é o que atualiza o preço das Opções de acordo
+      # com o modelo BAW de precificações de opções
       
       xts_historico <- xts(df.historico[["PL_5"]], order.by = df.historico[["dia1"]])
       
       #plot.xts(xts_historico)
       
-      # comparando acao vs estrategia
+      ### comparando acao vs estrategia
       
-      # construindo indice de acao
-      
-      
+      ## construindo indice de acao   
       
       # construindo o indice da estrategia
       
@@ -532,26 +507,19 @@ for (janela in janelas[4:5] ) {
       #plot.xts(cbind(indice_acao, indice_estrategia ) )
       
     }
-    
-    
-    
-    # [-1] é por causa do erro que a primeira carteira eu nao coloquei o log certo la na funcao dela
-    
+
     colnames(indices_performance) <- c('Papel_base',names(estrategias))
     colnames(retorno_indices_performance) <- c('Papel_base',names(estrategias))
     
     retorno_indices_performance <- retorno_indices_performance[-1000,]
     
-    #charts.PerformanceSummary(R = retorno_indices_performance, geometric = FALSE)
     # salvando os resultados do backresting
     
-    saveRDS(logs_das_estrategias,file = paste0(".//estrategias/dados testes/logs_das_estrategias_varios_anos_",first(janela),
-                                               ".RData"))
+    saveRDS(logs_das_estrategias,file = paste0(".//estrategias/dados testes/logs_das_estrategias_varios_anos_",first(janela),".RData"))
     
     saveRDS(historico,file = paste0(".//estrategias/dados testes/historico_varios_anos_",first(janela),".RData"))
     
-    saveRDS(indices_performance,file = paste0(".//estrategias/dados testes/indices_performance_varios_anos_",first(janela),
-                                              ".RData"))
+    saveRDS(indices_performance,file = paste0(".//estrategias/dados testes/indices_performance_varios_anos_",first(janela),".RData"))
     
     saveRDS(retorno_indices_performance,file = paste0(".//estrategias/dados testes/retorno_indices_performance_varios_anos_",first(janela),
                                                       ".RData"))
