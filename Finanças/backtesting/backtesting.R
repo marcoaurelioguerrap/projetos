@@ -76,22 +76,22 @@ id_arquivos <- rbind(c("2006-01-12","2013-02-19"),
 
 for (i in 1:3) {
   if (i == 1){
-    ALL_CALLS <- readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+    ALL_CALLS <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_",
                                                                         id_arquivos[i,1],"_",id_arquivos[i,2],
                                                                         ".RData"))
     
-    ALL_CALLS <- readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+    ALL_CALLS <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_",
                                                                                 id_arquivos[i,1],"_",id_arquivos[i,2],
                                                                                 ".RData"))
     
   } else {
     
     ALL_CALLS <- cbind(ALL_CALLS,
-                       readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+                       readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_",
                                              id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
     
     ALL_CALLS <- cbind(ALL_CALLS,
-                       readRDS(file = paste0(".//dados backtesting/ALL_CALLS_120_final_",
+                       readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_CALLS_120_final_",
                                              id_arquivoss[i,1],"_",id_arquivos[i,2],".RData")))
   }
 }
@@ -103,22 +103,22 @@ for (i in 1:3) {
 
 for (i in 1:3) {
   if (i == 1){
-    ALL_PUTS <- readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+    ALL_PUTS <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_",
                                        id_arquivos[i,1],"_",id_arquivos[i,2],
                                        ".RData"))
     
-    ALL_PUTS <- readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+    ALL_PUTS <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_",
                                        id_arquivos[i,1],"_",id_arquivos[i,2],
                                        ".RData"))
     
   } else {
     
     ALL_PUTS <- cbind(ALL_PUTS,
-                       readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+                       readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_",
                                              id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
     
     ALL_PUTS <- cbind(ALL_PUTS,
-                       readRDS(file = paste0(".//dados backtesting/ALL_PUTS_120_final_",
+                       readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/ALL_PUTS_120_final_",
                                              id_arquivoss[i,1],"_",id_arquivos[i,2],".RData")))
   }
 }
@@ -135,22 +135,22 @@ id_arquivos <- rbind(c("2006-01-12","2013-02-19"),
 
 for (i in 1:3) {
   if (i == 1){
-    Zigmas_teste <- readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+    Zigmas_teste <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_",
                                        id_arquivos[i,1],"_",id_arquivos[i,2],
                                        ".RData"))
     
-    Zigmas_teste <- readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+    Zigmas_teste <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_",
                                        id_arquivos[i,1],"_",id_arquivos[i,2],
                                        ".RData"))
     
   } else {
     
     Zigmas_teste <- cbind(Zigmas_teste,
-                       readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+                       readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_",
                                              id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
     
     Zigmas_teste <- cbind(Zigmas_teste,
-                       readRDS(file = paste0(".//dados backtesting/Zigmas_forcasted_todos_final_",
+                       readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/Zigmas_forcasted_todos_final_",
                                              id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
   }
 }
@@ -167,22 +167,22 @@ id_arquivos <- rbind(c("2006-01-12","2013-02-19"),
 
 for (i in 1:3) {
   if (i == 1){
-    retornos_simulados <- readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+    retornos_simulados <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_",
                                           id_arquivos[i,1],"_",id_arquivos[i,2],
                                           ".RData"))
     
-    retornos_simulados <- readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+    retornos_simulados <- readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_",
                                           id_arquivos[i,1],"_",id_arquivos[i,2],
                                           ".RData"))
     
   } else {
     
     retornos_simulados <- cbind(retornos_simulados,
-                          readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+                          readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_",
                                                 id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
     
     retornos_simulados <- cbind(retornos_simulados,
-                          readRDS(file = paste0(".//dados backtesting/retornos_simulados_final_",
+                          readRDS(file = paste0(".//Gerando Dados para o Backtesting/dados backtesting/retornos_simulados_final_",
                                                 id_arquivos[i,1],"_",id_arquivos[i,2],".RData")))
   }
 }
@@ -611,10 +611,10 @@ colnames(indices_performance) <- "Underlying Asset"
                            
 for ( i in 1:3){
 
-  indices_performance <- cbind(indices_performance,readRDS(file = paste0(".//estrategias/dados testes/indices_performance_final_",grupo_estrategia[i,1],"_",
+  indices_performance <- cbind(indices_performance,readRDS(file = paste0(".//dados testes/indices_performance_final_",grupo_estrategia[i,1],"_",
                                                grupo_estrategia[i,2],".RData"))[,-1])
   
-  retorno_indices_performance <- cbind(retorno_indices_performance,readRDS(file = paste0(".//estrategias/dados testes/retorno_indices_performance_final_",grupo_estrategia[i,1],"_",
+  retorno_indices_performance <- cbind(retorno_indices_performance,readRDS(file = paste0(".//dados testes/retorno_indices_performance_final_",grupo_estrategia[i,1],"_",
                                                grupo_estrategia[i,2],".RData"))[,-1])
   
 }
