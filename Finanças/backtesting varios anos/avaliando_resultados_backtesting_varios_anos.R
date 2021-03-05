@@ -158,8 +158,22 @@ risco_retorno$des.pad. <- (risco_retorno$des.pad. )*sqrt(252)
 
 # 4) scatter plot risco-retorno, varios anos ######
 
-ggplot(data = risco_retorno[which(risco_retorno$id %in% estrategias_selecionadas), ] , aes(x=des.pad.,y=retorno )) + 
+
+# props to https://stackoverflow.com/questions/15282580/how-to-generate-a-number-of-most-distinctive-colors-in-r #####
+
+library(RColorBrewer)
+n <- 24
+qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
+#col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+color = grDevices::colors()[grep('gr(a|e)y', grDevices::colors(), invert = T)]
+pie(rep(1,n), col=sample(col_vector, n))
+pie(rep(1,n), col=sample(color, n))
+#####
+
+ggplot(data = risco_retorno[which(risco_retorno$id %in% c(estrategias_selecionadas,'Papel_base' ) ), ] , aes(x=des.pad.,y=retorno )) + 
   geom_point(aes(color=id)) +
+  scale_color_manual(values = sample(color, n)) +
+  #scale_color_brewer(palette="Paired") +
   #scale_fill_distiller(name = "Pain Ratio",palette = 'Spectral') +
   scale_y_continuous(name = 'Retorno Anualizado') + 
   scale_x_continuous(name = 'Risco Anualizado') + 
