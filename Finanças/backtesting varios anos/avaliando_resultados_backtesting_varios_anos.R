@@ -835,6 +835,8 @@ df <- as.data.frame(df)
 
 # 11.3) mapa de calor usando o metodo de estimação de densidade kernel ####
 
+# props to Nicholas G. Reich in https://stackoverflow.com/questions/23437000/how-to-plot-a-contour-line-showing-where-95-of-values-fall-within-in-r-and-in                                                        
+                                                       
 dc_todos <- data.frame()
 
 dc_ES_todos <- data.frame()
