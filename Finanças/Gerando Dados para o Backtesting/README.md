@@ -2,7 +2,7 @@
 
 **Info**
 
-['salva_os_dados_das_simulacoes_para_backtesting.R'](salva_os_dados_das_simulacoes_para_backtesting.R) - Esse código gera os dados que serão utilizados no backtesting das estratégias. O output são os objetos : ALL_CALLS , ALL_PUTS , Zigmas_forcasted_todos e retornos_simulados. Esses objetos são utilizado pelo ['backtesting.R'](../backtesting/backtesting.R) e ['backtesting_varios_anos.R'](../backtesting%20varios%20anos/backtesting_varios_anos.R). Também é salvo se a informação se o GARCH convergiu ou não.
+['salva_os_dados_das_simulacoes_para_backtesting.R'](salva_os_dados_das_simulacoes_para_becktesting.R) - Esse código gera os dados que serão utilizados no backtesting das estratégias. O output são os objetos : ALL_CALLS , ALL_PUTS , Zigmas_forcasted_todos e retornos_simulados. Esses objetos são utilizado pelo ['backtesting.R'](../backtesting/backtesting.R) e ['backtesting_varios_anos.R'](../backtesting%20varios%20anos/backtesting_varios_anos.R). Também é salvo se a informação se o GARCH convergiu ou não.
 
 OBS.: demora certa de 6 horas para gerar esses dados. Caso se deseja reduzir o tamanho do periodo em que se gera os dados, na linha 126 do código é possivel escolher os dias que serão gerados essas informações.
 
