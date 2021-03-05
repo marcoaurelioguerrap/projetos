@@ -52,6 +52,10 @@ Obs.: na pasta para as 23 estratégias diferentes ['perf_est_{de 1 a 4}_{2008,20
 Pelos resultados dos testes fica claro que os modelos condicionais possuem as características desejadas. Pelo gráfico a baixo também é possivel perceber esse resultado pelo distanciamento mais uniforne nos métodos condicionais.
 
 
+![alt text](.//imagens/VaR_SH_vs_CONDEVT_PETR4.png)
+
+
+
 | |
 |:-------------------------:|
 |<img src=".//imagens/violacoes_var/violacoes_var_95Papel_base.png">|
