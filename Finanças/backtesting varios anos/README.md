@@ -67,8 +67,9 @@ SH-EWMA - utiliza um modelo de média movel exponensialmente ponderada para cál
 
 SH-CONDEVT VaR 95% usa um processo de duas etapas. No SH-CONDEVT primeiro se estima um GARCH por quasi verossimilhança ( GARCH normal , mesmo sabendo que a distribuição que mais se adapta é uma t-student ), em seguida os erros dessa estimação então são **padronizados** ( óbvio! mas apanhei por causa disso rs ) e usados como input para o método de ***peaks-over-threshold*** com uma distribuição Generalizada de Pareto. 
 
-Pelos resultados dos testes fica claro que os modelos condicionais possuem as características desejadas. Pelo gráfico a baixo também é possivel perceber por que os métodos condicionais têm uma melhor resposta, violações independentes e com número observado próximo do esperado  ( 16 ( baixo mais não rejeita H0 a 5%) para o método condicional e 10 para o não condicional )
+Pelos resultados dos testes fica claro que os modelos condicionais possuem as características desejadas. Pelo gráfico a baixo também é possivel perceber por que os métodos condicionais têm uma melhor resposta, violações independentes e com número observado próximo do esperado  ( 16 ( baixo mais não rejeita H0 a 5%) para o método condicional e 10 para o não condicional ).
 
+**-Log retornos da PETR4 (Papel base)**
 ![-Log retornos de PETR4](.//imagens/VaR_SH_vs_CONDEVT_PETR4.png)
 [-Log retornos da estrategia_14_6](.//imagens/VaR_SH_vs_CONDEVT_est_14_6.png)
 
