@@ -1,13 +1,14 @@
+# Dados para o Backtesting
+
 **Info**
 
-"salva_os_dados_das_simulacoes_para_backtesting.R" - Esse código gera os dados que serão utilizados no backtesting das estratégias. O output são os objetos : ALL_CALLS , ALL_PUTS , Zigmas_forcasted_todos e retornos_simulados. Esses objetos são utilizado pelo "backtesting.R" e "backtesting_varios_anos.R". Também é salvo se o GARCH convergiu ou não.
+['salva_os_dados_das_simulacoes_para_backtesting.R'](salva_os_dados_das_simulacoes_para_backtesting.R) - Esse código gera os dados que serão utilizados no backtesting das estratégias. O output são os objetos : ALL_CALLS , ALL_PUTS , Zigmas_forcasted_todos e retornos_simulados. Esses objetos são utilizado pelo ['backtesting.R'](../backtesting/backtesting.R) e ['backtesting_varios_anos.R'](../backtesting%20varios%20anos/backtesting_varios_anos.R). Também é salvo se a informação se o GARCH convergiu ou não.
 
 OBS.: demora certa de 6 horas para gerar esses dados. Caso se deseja reduzir o tamanho do periodo em que se gera os dados, na linha 126 do código é possivel escolher os dias que serão gerados essas informações.
 
 OBS.: Ele utiliza os dados gerados pelos scripts :
-> "compila_dados_arquivos_B3.R", "le div e split.R" 
-
-Esses dados estão nos salvos nos seguintes arquivos
+> ['compila_dados_arquivos_B3.R'](..//Lendo%20Arquivos%20da%20B3/compila_dados_arquivos_B3.R), ['le div e split.R'](../Formatando%20os%20Dados/le%20div%20e%20split.R) 
+Os quais estão salvos nos seguintes arquivos
 > "lista_das_acoes.RData" , "lista_dos_CALL.RData", "lista_dos_PUT.RData" , "preco.acoes.nivel.RData"
 
 Embora os dois primeiros RData's não estão nesse repositório os dois ultimos estão. o "compila_dados_arquivos_B3.R" demora próximo de 4 horas para gerar as "listas".
