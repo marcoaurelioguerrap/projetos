@@ -1,6 +1,8 @@
+# Formatando os Dados
+
 **Info**
 
-"carrega_acoes_opcoes.R" - Usado para ler os arquivos ( gerados pelo "compila_dados_arquivos_B3.R" ) e formatar os dados : 
+['carrega_acoes_opcoes.R'](carrega_acoes_opcoes.R) - Usado para ler os arquivos gerados pelo ['compila_dados_arquivos_B3.R'](../Lendo Arquivos da B3/compila_dados_arquivos_B3.R)  e formatar os dados : 
 >"lista_das_acoes.RData" , "lista_dos_CALL.RData", "lista_dos_PUT.RData"  
 
 "le div e split.R" - Pega os dados "//dados de desdobramentos e dividendos/dados_split_div.txt" que contém as informações de desdobramentos e dividendos de algumas ações selecionadas ( por volume )
