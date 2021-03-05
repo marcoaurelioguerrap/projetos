@@ -10,5 +10,5 @@ OBS.: Esses dados são retirados do yahoo finance e existe alguns erros neles. p
 esses casos. A forma atual do código só executa a correção para o preço ajustado ( sem mudança no código ) para PETR4. Pois o meu primeiro estudo só foi feito utilizando uma ação. Em algum momento no futuro vou 
 generalizar o código para fazer o ajuste de maneira automática para todas as ações da lista de ações estudadas.
 
-['//dados de desdobramentos e dividendos/'](//dados%20de%20desdobramentos%20e%20dividendos/) - Pasta que contém os dados (['dados_split_div.txt'](.//dados%20de%20desdobramentos%20e%20dividendos/dados_split_div.txt)) e o código que gera os dados de desdobramentos ("pega div e split.py"). Além da lista 
+['//dados de desdobramentos e dividendos/'](.//dados%20de%20desdobramentos%20e%20dividendos/) - Pasta que contém os dados (['dados_split_div.txt'](.//dados%20de%20desdobramentos%20e%20dividendos/dados_split_div.txt)) e o código que gera os dados de desdobramentos ("pega div e split.py"). Além da lista 
 com as ações estudadas ( ['acoes.estudadas.csv'](.//dados%20de%20desdobramentos%20e%20dividendos/acoes.estudadas.csv))
