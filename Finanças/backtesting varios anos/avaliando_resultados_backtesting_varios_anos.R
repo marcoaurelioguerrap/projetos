@@ -22,8 +22,6 @@ library(reshape2)
 # install.packages("webshot")
 # webshot::install_phantomjs()
 
-setwd("C:/Marco/Dados/Bolsa/Tudo junto/github")
-
 ######## avaliando resultados backtesting varios anos ##########
 
 # Carregando os dados ######
@@ -39,27 +37,24 @@ lista_indices_performance <- list()
 
 lista_retorno_indices_performance <- list()
 
-
-
-
 for (i in 1:3) {
   if (i == 1){
-    indices_performance_todas_estrategias_2006 <- readRDS(file = paste0(".//estrategias/dados testes/indices_performance_final_",
+    indices_performance_todas_estrategias_2006 <- readRDS(file = paste0(".//dados testes/indices_performance_final_",
                                                                         id_estrategias[i,1],"_",id_estrategias[i,2],
                                                                         ".RData"))
     
-    retorno_indices_performance_todas_estrategias_2006 <- readRDS(file = paste0(".//estrategias/dados testes/retorno_indices_performance_final_",
+    retorno_indices_performance_todas_estrategias_2006 <- readRDS(file = paste0(".//dados testes/retorno_indices_performance_final_",
                                                                                 id_estrategias[i,1],"_",id_estrategias[i,2],
                                                                                 ".RData"))
     
   } else {
     
     indices_performance_todas_estrategias_2006 <- cbind(indices_performance_todas_estrategias_2006,
-                                                        readRDS(file = paste0(".//estrategias/dados testes/indices_performance_final_",
+                                                        readRDS(file = paste0(".//dados testes/indices_performance_final_",
                                                                               id_estrategias[i,1],"_",id_estrategias[i,2],".RData"))[,-1])
     
     retorno_indices_performance_todas_estrategias_2006 <- cbind(retorno_indices_performance_todas_estrategias_2006,
-                                                                readRDS(file = paste0(".//estrategias/dados testes/retorno_indices_performance_final_",
+                                                                readRDS(file = paste0(".//dados testes/retorno_indices_performance_final_",
                                                                                       id_estrategias[i,1],"_",id_estrategias[i,2],".RData"))[,-1])
   }
 }
@@ -98,10 +93,10 @@ janelas = list(
 for (janela in janelas) {
   
   
-  lista_indices_performance[[as.character(first(janela))]] <- readRDS(file = paste0(".//estrategias/dados testes/indices_performance_varios_anos_",first(janela),
+  lista_indices_performance[[as.character(first(janela))]] <- readRDS(file = paste0(".//dados testes/indices_performance_varios_anos_",first(janela),
                                                                                     ".RData"))
   
-  lista_retorno_indices_performance[[as.character(first(janela))]] <- readRDS(file = paste0(".//estrategias/dados testes/retorno_indices_performance_varios_anos_",
+  lista_retorno_indices_performance[[as.character(first(janela))]] <- readRDS(file = paste0(".//dados testes/retorno_indices_performance_varios_anos_",
                                                                                             first(janela),".RData"))
 }
 #####
@@ -121,6 +116,7 @@ risco_retorno <- data.frame( id = '',
                              Pain_index = as.numeric(0),
                              Pain_ratio = as.numeric(0))
 
+# loop que itera sobre todas as estrategias 
 for (janela in names(lista_retorno_indices_performance)) { 
   
   print(janela)
@@ -159,10 +155,8 @@ risco_retorno$des.pad. <- (risco_retorno$des.pad. )*sqrt(252)
 
 #####
 
-# 894x604
+
 # 4) scatter plot risco-retorno, varios anos ######
-
-
 
 ggplot(data = risco_retorno[which(risco_retorno$id %in% estrategias_selecionadas), ] , aes(x=des.pad.,y=retorno )) + 
   geom_point(aes(color=id)) +
