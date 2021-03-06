@@ -1,4 +1,4 @@
- **Info**
+# Info
  
   O codigo ['compila_dados_arquivos_B3.R'](compila_dados_arquivos_B3.R) lê os arquivos baixados do site da B3 (http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/historico/mercado-a-vista/series-historicas/)
 e salva os dados em 3 arquivos ( "lista_das_acoes.RData" , "lista_dos_CALL.RData", "lista_dos_PUT.RData" ). Os dados gerados são as ações e opções negociadas.
