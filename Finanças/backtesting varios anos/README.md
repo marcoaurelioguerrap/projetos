@@ -91,3 +91,20 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 # Retorno-Risco
 
 gráficos do Retorno-Risco para a PETR4 para todo o periodo 
+
+![risco desvpad retorno PETR4](.//imagens/heatmap_retorno_despad_petr4_rw.png)
+
+![risco var retorno PETR4](.//imagens/heatmap_risco_retorno_petr4_rw.png)
+
+
+![alt text](.//imagens/hm_retornos_despad_rw_todos.png)
+![alt text](.//imagens/hm_retornos_var_95_rw_todos.png)
+![alt text](.//imagens/hm_retornos_ES_rw_todos.png)
+
+# Performance e Drawdown
+
+| | | 
+|:-------------------------:|:-------------------------:|
+|<img width="1604"  src="./imagens/ret_nivel_todos_anos_1.png">   |  <img width="1604"  src="./imagens/ret_nivel_todos_anos_2.png">|
+|<img width="1604"  src="./imagens/ret_nivel_todos_anos_3.png">|<img width="1604"  src="./imagens/ret_nivel_todos_anos_4.png">  |
+| <img width="1604"  src="./imagens/ret_nivel_todos_anos_5.png">|
