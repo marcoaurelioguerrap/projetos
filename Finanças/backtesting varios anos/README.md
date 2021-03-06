@@ -92,7 +92,7 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 
 # Retorno-Risco
 
-Uma vez cálculado o VaR e do ES em rolling também aproveitei para cálcular o desvio padrão rolling window para ver como se comportava ao longo do tempo. Os dois primeiros são os  retornos-risco( VaR (SH-CONDEVT e desv. pad) da PETR4. Nos gráficos seguintes são exibidos os retornos-risco para as outras estratégias selecionadas, como eu estava usando o SH-CONDEVT algumas estratégias não possuiam observações suficiente ( [problema do &xi; < 0](README.md#L17) ).
+Uma vez cálculado o VaR e do ES em rolling também aproveitei para cálcular o desvio padrão rolling window para ver como se comportava ao longo do tempo. Os dois primeiros são os  retornos-risco( VaR (SH-CONDEVT e desv. pad) da PETR4. Nos gráficos seguintes são exibidos os retornos-risco para as outras estratégias selecionadas, como eu estava usando o SH-CONDEVT algumas estratégias não possuiam observações suficiente ( [problema do &xi; < 0](README#L17-18) ).
 
 **gráficos do Retorno-Risco ao longo do tempo (2010-02-05/2020-01-21) para a PETR4 para todo o periodo**
 
