@@ -40,7 +40,7 @@
 
 -[6.2) Resultados](.//backtesting%20varios%20anos#resultados-média-das-janelas)
 
- -[6.2.1) Retorno-Risco](.//backtesting%20varios%20anos#retorno-risco)
+-[6.2.1) Retorno-Risco](.//backtesting%20varios%20anos#retorno-risco)
 
  -[6.2.2) Value at Risk](.//backtesting%20varios%20anos#var)
 
