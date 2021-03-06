@@ -22,19 +22,19 @@ O gráfico a baixo mostra a relação entre o risco e o retorno de cada estraté
 
 ![alt text](./imagens/risco_retornos_est_sel_por_ano_v2.png)
 
-**Indicadores**
+# Indicadores
 
 [tabela de indicadores por janela](./imagens/Indicadores_melhores_est_por_ano.png)
 
-**Value at Risk**
+# Value at Risk
 
 [Tabela com Value at Risk por janela](./imagens/VaR_melhores_est_por_ano.png)
 
-**Expected Shortfall**
+# Expected Shortfall
 
 [Tabela com Expected Shortfall por janela](./imagens/ES_melhores_est_por_ano.png)
 
-**Performance e Drawdown**
+# Performance e Drawdown
 
 | | | 
 |:-------------------------:|:-------------------------:|
