@@ -22,19 +22,19 @@ O gráfico a baixo mostra a relação entre o risco e o retorno de cada estraté
 
 ![alt text](./imagens/risco_retornos_est_sel_por_ano_v2.png)
 
-# Indicadores
+## Indicadores
 
 [tabela de indicadores por janela](./imagens/Indicadores_melhores_est_por_ano.png)
 
-# Value at Risk
+## Value at Risk
 
 [Tabela com Value at Risk por janela](./imagens/VaR_melhores_est_por_ano.png)
 
-# Expected Shortfall
+## Expected Shortfall
 
 [Tabela com Expected Shortfall por janela](./imagens/ES_melhores_est_por_ano.png)
 
-# Performance e Drawdown
+## Performance e Drawdown
 
 | | | 
 |:-------------------------:|:-------------------------:|
@@ -47,7 +47,7 @@ Obs.: na pasta para as 23 estratégias diferentes ['perf_est_{de 1 a 4}_{2008,20
 
 # Resultados (Média das janelas)
 
-# Retorno-Risco
+## Retorno-Risco
 
 Uma vez cálculado o VaR e do ES em rolling também aproveitei para cálcular o desvio padrão rolling window para ver como se comportava ao longo do tempo. Os dois primeiros são os  retornos-risco( VaR (SH-CONDEVT e desv. pad) da PETR4. No gráfico do retorno-VaR foi incluido os 20 maiores violações do VaR, a linha preta a diferença entre a violação e o VaR esperado. Nos gráficos seguintes são exibidos os retornos-risco para as outras estratégias selecionadas, como os gráficos abaixo usando o SH-CONDEVT algumas estratégias não possuiam observações suficiente ( problema do &xi; < 0 ).
 
@@ -65,7 +65,7 @@ Uma vez cálculado o VaR e do ES em rolling também aproveitei para cálcular o 
 ![alt text](.//imagens/hm_retornos_ES_rw_todos.png)
 
 
-# VaR
+## VaR
 **Estimações do VaR window** - Foram testados 8 modelos para a estimação do Value at Risk e do Expected Shortfall em rolling window. Como foi feito em rolling window é possível testar se os VaR estimados geram os resultados esperados. Por exemplo, se uma estratégia possui uma estimação para o VaR do log das perdas ( -log retornos ) no periodo seguinte, pela definição, se espera que o numero de vezes que o VaR é violado é proximo do número de observações ao longo do tempo vezes o nivel de VaR escolhido ( n x (1-&alpha;) ). Para isso é realizado um teste Binomial(n,(1-&alpha;)). Uma outra característica desejável, é que os excessos do VaR ocorram de forma dependente, ou seja, os excesso não sejam agrupados, se isso acontece quer dizer que o VaR é superestimado em alguns periodos e subestimado em outros. Para isso é realizado um teste de razão de maxima verossimilhança ( ***Evaluating Interval Forecasts - Christoffersen (1998)*** ). Ambos testes estão no pacote (rugarch). 
 
 **Modelos:**
@@ -100,7 +100,7 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 |<img src=".//imagens/violacoes_var/violacoes_var_95Papel_base.png">|
 |<img src=".//imagens/violacoes_var/violacoes_var_99Papel_base.png">|
 
-# ES
+## ES
 
 **Estimações do ES rolling** - Para o caso da estimação do Expected Shortfall a caracteristica desejada é que os excessos tenham a média igual a estimativa e sejam indepentente e identicamente distribuidas. Se a média não é igual, então, pela definição ES<sub>&alpha;</sub>(perdas) = E( perdas | perdas > VaR<sub>&alpha;</sub>(perdas) ) temos que a estimação do ES<sub>&alpha;</sub>(perdas) não é correta.
 
@@ -111,7 +111,7 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 
 
 
-# Performance e Drawdown
+## Performance e Drawdown
 
 | | | 
 |:-------------------------:|:-------------------------:|
