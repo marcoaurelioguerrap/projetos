@@ -47,7 +47,8 @@ Obs.: na pasta para as 23 estratégias diferentes ['perf_est_{de 1 a 4}_{2008,20
 
 # Resultados (Média das janelas)
 
-**Estimações do VaR window** - Foram testados 8 modelos para a estimação do Value at Risk e do Expected Shortfall em rolling window. Como foi feito em rolling window é possível testar se os VaR estimados geram os resultados esperados. Por exemplo, se uma estratégia possui uma estimação para o VaR do log das perdas ( -log retornos ) no periodo seguinte, pela definição, se espera que o numero de vezes que o VaR é violado é proximo do número de observações ao longo do tempo vezes o nivel de VaR escolhido ( n x (1-&alpha;) ). Para isso é realizado um teste Binomial(n,(1-&alpha;)). Uma outra característica desejável, é que os excessos do VaR ocorram de forma dependente, ou seja, os excesso não sejam agrupados, se isso acontece quer dizer que o VaR é superestimado em alguns periodos e subestimado em outros. Para isso é realizado um teste de razão de maxima verossimilhança ( ***Evaluating Interval Forecasts - Christoffersen (1998)*** ). Ambos testes estão no pacote (rugarch). 
+# VaR
+Estimações do VaR window** - Foram testados 8 modelos para a estimação do Value at Risk e do Expected Shortfall em rolling window. Como foi feito em rolling window é possível testar se os VaR estimados geram os resultados esperados. Por exemplo, se uma estratégia possui uma estimação para o VaR do log das perdas ( -log retornos ) no periodo seguinte, pela definição, se espera que o numero de vezes que o VaR é violado é proximo do número de observações ao longo do tempo vezes o nivel de VaR escolhido ( n x (1-&alpha;) ). Para isso é realizado um teste Binomial(n,(1-&alpha;)). Uma outra característica desejável, é que os excessos do VaR ocorram de forma dependente, ou seja, os excesso não sejam agrupados, se isso acontece quer dizer que o VaR é superestimado em alguns periodos e subestimado em outros. Para isso é realizado um teste de razão de maxima verossimilhança ( ***Evaluating Interval Forecasts - Christoffersen (1998)*** ). Ambos testes estão no pacote (rugarch). 
 
 **Modelos:**
 
@@ -72,6 +73,7 @@ SH-CONDEVT VaR 95% usa um processo de duas etapas. No SH-CONDEVT primeiro se est
 Pelos resultados dos testes fica claro que os modelos condicionais possuem as características desejadas. Pelo gráfico a baixo também é possivel perceber por que os métodos condicionais têm uma melhor resposta, violações independentes e com número observado próximo do esperado  ( 16 ( baixo mais não rejeita H0 a 5%) para o método condicional e 10 para o não condicional ).
 
 **-Log retornos diário do ínicio de 2018 ao final de 2019 da PETR4 (Papel base)**
+
 ![-Log retornos de PETR4](.//imagens/VaR_SH_vs_CONDEVT_PETR4.png)
 [-Log retornos da estrategia_14_6](.//imagens/VaR_SH_vs_CONDEVT_est_14_6.png)
 
@@ -80,7 +82,7 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 |<img src=".//imagens/violacoes_var/violacoes_var_95Papel_base.png">|
 |<img src=".//imagens/violacoes_var/violacoes_var_99Papel_base.png">|
 
-
+# ES
 
 **Estimações do ES rolling** - Para o caso da estimação do Expected Shortfall a caracteristica desejada é que os excessos tenham a média igual a estimativa e sejam indepentente e identicamente distribuidas. Se a média não é igual, então, pela definição ES<sub>&alpha;</sub>(perdas) = E( perdas | perdas > VaR<sub>&alpha;</sub>(perdas) ) temos que a estimação do ES<sub>&alpha;</sub>(perdas) não é correta.
 
