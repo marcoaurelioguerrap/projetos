@@ -69,7 +69,7 @@ SH-CONDEVT VaR 95% usa um processo de duas etapas. No SH-CONDEVT primeiro se est
 
 Pelos resultados dos testes fica claro que os modelos condicionais possuem as características desejadas. Pelo gráfico a baixo também é possivel perceber por que os métodos condicionais têm uma melhor resposta, violações independentes e com número observado próximo do esperado  ( 16 ( baixo mais não rejeita H0 a 5%) para o método condicional e 10 para o não condicional ).
 
-**-Log retornos da PETR4 (Papel base)**
+**-Log retornos diário do ínicio de 2018 ao final de 2019 da PETR4 (Papel base)**
 ![-Log retornos de PETR4](.//imagens/VaR_SH_vs_CONDEVT_PETR4.png)
 [-Log retornos da estrategia_14_6](.//imagens/VaR_SH_vs_CONDEVT_est_14_6.png)
 
@@ -88,3 +88,6 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 |<img src=".//imagens/violacoes_var/violacoes_var_99Papel_base.png">|
 
 
+# Retorno-Risco
+
+gráficos do Retorno-Risco para a PETR4 para todo o periodo 
