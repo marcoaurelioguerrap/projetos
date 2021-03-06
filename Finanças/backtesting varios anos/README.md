@@ -47,7 +47,7 @@ Obs.: na pasta para as 23 estratégias diferentes ['perf_est_{de 1 a 4}_{2008,20
 
 # Resultados (Média das janelas)
 
-**Estimações do VaR window** - Foram testados 8 modelos para a estimação do Value at Risk e do Expected Shortfall em rolling window. Como foi feito em rolling window é possível testar se os VaR estimados geram os resultados esperados. Por exemplo, se uma estratégia possui uma estimação para o VaR do log das perdas ( -log retornos ) no periodo seguinte, pela definição, se espera que o numero de vezes que o VaR é violado é proximo do número de observações ao longo do tempo vezes o nivel de VaR escolhido ( n x (1-$alpha;) ). Para isso é realizado um teste Binomial(n,(1-&alpha;)). Uma outra característica desejável, é que os excessos do VaR ocorram de forma dependente, ou seja, os excesso não sejam agrupados, se isso acontece quer dizer que o VaR é superestimado em alguns periodos e subestimado em outros. Para isso é realizado um teste de razão de maxima verossimilhança ( ***Evaluating Interval Forecasts - Christoffersen (1998)*** ). Ambos testes estão no pacote (rugarch). 
+**Estimações do VaR window** - Foram testados 8 modelos para a estimação do Value at Risk e do Expected Shortfall em rolling window. Como foi feito em rolling window é possível testar se os VaR estimados geram os resultados esperados. Por exemplo, se uma estratégia possui uma estimação para o VaR do log das perdas ( -log retornos ) no periodo seguinte, pela definição, se espera que o numero de vezes que o VaR é violado é proximo do número de observações ao longo do tempo vezes o nivel de VaR escolhido ( n x (1-&alpha;) ). Para isso é realizado um teste Binomial(n,(1-&alpha;)). Uma outra característica desejável, é que os excessos do VaR ocorram de forma dependente, ou seja, os excesso não sejam agrupados, se isso acontece quer dizer que o VaR é superestimado em alguns periodos e subestimado em outros. Para isso é realizado um teste de razão de maxima verossimilhança ( ***Evaluating Interval Forecasts - Christoffersen (1998)*** ). Ambos testes estão no pacote (rugarch). 
 
 **Modelos:**
 
@@ -66,6 +66,8 @@ SH-GARCH t - usa um modelo garch(1,1)-arma(1,1,) supondo choques seguindo uma t-
 SH-EWMA - utiliza um modelo de média movel exponensialmente ponderada para cálculo do VaR;
 
 SH-CONDEVT VaR 95% usa um processo de duas etapas. No SH-CONDEVT primeiro se estima um GARCH por quasi verossimilhança ( GARCH normal , mesmo sabendo que a distribuição que mais se adapta é uma t-student ), em seguida os erros dessa estimação então são **padronizados** ( óbvio! mas apanhei por causa disso rs ) e usados como input para o método de ***peaks-over-threshold*** com uma distribuição Generalizada de Pareto. 
+
+>nota: Para o problema do modelo SH-CONDEVT depender do parametro &xi; ser positivo vou fazer uma alteração para quando isso ocorre, o modelo use apenas os retornos do GARCH(1,1)-ARMA(1,1) com distribuição normal. ( talves nessa situação altere para um que siga uma t-student, não sei ainda).
 
 Pelos resultados dos testes fica claro que os modelos condicionais possuem as características desejadas. Pelo gráfico a baixo também é possivel perceber por que os métodos condicionais têm uma melhor resposta, violações independentes e com número observado próximo do esperado  ( 16 ( baixo mais não rejeita H0 a 5%) para o método condicional e 10 para o não condicional ).
 
@@ -90,12 +92,16 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 
 # Retorno-Risco
 
-gráficos do Retorno-Risco para a PETR4 para todo o periodo 
+Uma vez cálculado o VaR e do ES em rolling também aproveitei para cálcular o desvio padrão rolling window para ver como se comportava ao longo do tempo. Os dois primeiros são os  retornos-risco( VaR (SH-CONDEVT e desv. pad) da PETR4. Nos gráficos seguintes são exibidos os retornos-risco para as outras estratégias selecionadas, como eu estava usando o SH-CONDEVT algumas estratégias não possuiam observações suficiente ( [problema do &xi; < 0](#backtesting-varios-anos) ).
+
+**gráficos do Retorno-Risco ao longo do tempo (2010-02-05/2020-01-21) para a PETR4 para todo o periodo**
 
 ![risco desvpad retorno PETR4](.//imagens/heatmap_retorno_despad_petr4_rw.png)
 
 ![risco var retorno PETR4](.//imagens/heatmap_risco_retorno_petr4_rw.png)
 
+
+**gráficos do Retorno-Risco ao longo do tempo (2010-02-05/2020-01-21) para a PETR4 para todo o periodo**
 
 ![alt text](.//imagens/hm_retornos_despad_rw_todos.png)
 ![alt text](.//imagens/hm_retornos_var_95_rw_todos.png)
