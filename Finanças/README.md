@@ -22,13 +22,13 @@
 
 [6) Backtesting com mais periodos](.//backtesting%20varios%20anos)
 
--[6.1) Resultados](.//backtesting%20varios%20anos#resultados-janelas-separadas);
+-[6.1) Resultados Janelas separadas](.//backtesting%20varios%20anos#resultados-janelas-separadas);
 -[6.1.1) Indicadores de Risco](.//backtesting%20varios%20anos#indicadores);
 -[6.1.2) Value at Risk](.//backtesting%20varios%20anos#value-at-risk);
 -[6.1.3) Expected Shortfall](.//backtesting%20varios%20anos#expected-shortfall);
 -[6.1.4) Performance e drawdown](.//backtesting%20varios%20anos#performance-e-drawdown).
 
--[6.2) Resultados](.//backtesting%20varios%20anos#resultados-média-das-janelas);
+-[6.2) Resultados média das janelas](.//backtesting%20varios%20anos#resultados-média-das-janelas);
 -[6.2.1) Retorno-Risco](.//backtesting%20varios%20anos#retorno-risco);
 -[6.2.2) Value at Risk](.//backtesting%20varios%20anos#var);
 -[6.2.3) Expected Shortfall](.//backtesting%20varios%20anos#es);
