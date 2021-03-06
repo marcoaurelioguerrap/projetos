@@ -15,13 +15,13 @@ O gráfico a baixo mostra a relação entre o risco e o retorno de cada estraté
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Scatter%20plot%20Risco_Retorno.png)
 
-# Indicadores
+## Indicadores
 
 A tabela a seguir contêm alguns indicadores para auxiliar na avaliação das estratégias. Essa tabela só possui dados para estratégias selecionadas, mas na pasta ['//backtesting/imagens'](.//imagens/) tem uma versão com todas estratégias. Índice de Sharpe, é uma razão entre o log retorno e o desvio padrão anualizado. Na figura tracei duas retas onde delimitam o espaço onde seu valor é igual a 1 e 2. Max drawdown é o maior drawdown, i.e., diferença entre a posição em t e o último pico histórico. Sortino é semelhante ao Sharpe no entanto só utiliza o desvio padrão das quedas, a ideia é de que a volatilidade referente a um aumento não é ruim. Risk adjusted return é a razão da média do log retorno sobre o Value at Risk<sub>95%</sub>; , i.e., o retorno  negativo (perda) da estratégia no quantil ( da distribuição acumulada histórica ) de 95%. Pain Index , é a soma da área do Drawdown dividido pelo número de observações. Pain Ratio , é obtido dividindo a média dos log retornos pelo Pain Index.
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/Indicadores%202006%20estrategias%20selecionadas.png)
 
-# VaR 
+## VaR 
 
 Value at Risk<sub>&alpha;</sub>(-Log Retornos) - VaR<sub>&alpha;</sub>(-Log Retornos) é uma medida de risco que é definida como o quantil $alpha da distribuição acumulada dos logs retornos negativos. VaR<sub>&alpha;</sub>(-Log Retornos) é a menor perda a qual é excedida com probabilidade até 1-&alpha; ( Embrechts et al, 2015 ). Para calcular o VaR<sub>&alpha;</sub> é necessário uma distribuição acumulada, essa distribuição pode ser analitica ( ex.: pega se a média e desvio padrão do retornos historicos e se obtém uma distribuição normal(&mu;,&sigma;) ) , uma segunda maneira é utilizando a distruição histórica ( ex.: observa-se a distribuição acumulada históricamente ) e por último é a estimação por Monte Carlo. Cada um desses métodos possui vantagens e desvantagens. A tabela abaixo mostra o VaR<sub>&alpha;</sub> calculado para &alpha; = {.95 , .99} e diferentes métodos. O método análitico foi omitido pois o resultado é próximo ao método Monte Carlo. É possivel calcular o VaR<sub>&alpha;</sub>(-retornos) de forma dinâmica e condicional, VaR<sub>&alpha;</sub>(-retornos<sub>t</sub>|-retornos<sub>t-1:t-&delta;</sub>). Os calculos a baixo são feitos de forma não condicional.
 obs.: os valores NaN e 1 ocorrem quando não há convergência na estimação dos parametros da distribuição. 
@@ -29,14 +29,14 @@ obs.: os valores NaN e 1 ocorrem quando não há convergência na estimação do
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/VaR%202006%20estrategias%20selecionadas.png)
 
 
-# ES
+## ES
 
 Expected Shortfall<sub>&alpha;</sub>(-Log Retornos) - ES<sub>&alpha;</sub>(-Log Retornos) é a média do VaR<sub>&mu;</sub> para todo &mu; > &alpha;. O calculo do ES<sub>&alpha;</sub>(-Log Retornos) também possui uma forma analitica, historica e por Monte Carlo. A tabela abaixo mostra o ES<sub>&alpha;</sub> calculado para &alpha; = {.95 , .99} e diferentes métodos.
 obs.: os valores NaN e 1 ocorrem quando não há convergência na estimação dos parametros da distribuição. 
 
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/backtesting/imagens/ES%202006%20estrategias%20selecionadas.png)
 
-# Performance e Drawdown
+## Performance e Drawdown
 
 No gráfico a seguir são apresentados as performances e os Drawdown para estratégias selecionadas.
 
