@@ -43,6 +43,8 @@ Obs.: os modelos a seguir foram calculados por funções do pacote fOptions. Nã
 
 As imagens a seguir mostram os resultados dos preços projetados por cada modelo. Vale ressaltar que embora existam 626.716 e 496.073 observações no ALL_CALLS e ALL_PUTS, respectivamentes, apenas foram levados em conta na analise abaixo opções com até 120 dias para vencimento ou menos, moneyness menor que 2 e opções cujo o ultimo preço observado foi no dia. Além disso, os dados ALL_CALLS e ALL_PUTS geram dados para opções sem liquidez, ou seja, uma CALL que teve trade em um dia mas não foi mais negociada tem os preços simulados pelos 7 modelos diferentes e isso fica salvo nesses objetos. 
 
+# Resultados
+
 ![alt text](https://github.com/marcoaurelioguerrap/projetos/blob/main/Finan%C3%A7as/Gerando%20Dados%20para%20o%20Backtesting/Imagens/scatter_plot_call.png?raw=true)
 
 
