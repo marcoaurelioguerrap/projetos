@@ -29,12 +29,15 @@ Embora os dois primeiros ( <sup>*</sup> )RData's não estão nesse repositório 
 Obs.: os modelos a seguir foram calculados por funções do pacote fOptions. Não foi realizado uma estimação da curva de volatilidade ímplicita ,ou seja , volatilidade utilizada em determinado dia para todos os strikes são iguais ), isso ímplica que há erros nas precificações abaixo ( **ponto para melhorar no código!!!!** ) 
 
 --CRR : Modelo Binomial desenvolvido por Cox, Ross e Rubistein (1979);
+
 --JR : Modelo Binomial de Jarrow and Rudd (1983);
+
 --TIAN : Modelo Binomial de Tian (1993);
 
 --GBS : Black-Scholes padrão;
 
 --BAW : Aproximação de preço para opção americana baseado em Barone-Adesi and Whaley (1987);
+
 --BSA : Aproximação de preço para opção americana baseado em Bjerksund and Stensland (1993);
 
 
