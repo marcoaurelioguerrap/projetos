@@ -97,10 +97,9 @@ Uma vez cálculado o VaR e do ES em rolling também aproveitei para cálcular o 
 
 **gráficos do Retorno-Risco ao longo do tempo (2010-02-05/2020-01-21) para a PETR4 para todo o periodo**
 
-![risco desvpad retorno PETR4](.//imagens/heatmap_retorno_despad_petr4_rw.png)
-
-![risco var retorno PETR4](.//imagens/heatmap_risco_retorno_petr4_rw.png)
-
+| | | 
+|:-------------------------:|:-------------------------:|
+|<img width="1604"  src="./imagens/heatmap_retorno_despad_petr4_rw.png">   |  <img width="1604"  src="./imagens/heatmap_risco_retorno_petr4_rw.png">|
 
 **gráficos do Retorno-Risco ao longo do tempo (2010-02-05/2020-01-21) para 18 das 23 estratégias selecionadas para todo o periodo**
 
