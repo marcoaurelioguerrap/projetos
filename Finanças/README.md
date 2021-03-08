@@ -33,3 +33,31 @@
 -[6.2.2) Value at Risk](.//backtesting%20varios%20anos#var);
 -[6.2.3) Expected Shortfall](.//backtesting%20varios%20anos#es);
 -[6.2.4) Performance e drawdown](.//backtesting%20varios%20anos#performance-e-drawdown-1).
+
+# Lista dos pacotes utilizados e versões
+>"xts 0.11-2" ,
+"tidyverse 1.2.1",
+"BatchGetSymbols 2.5.2",
+"rjson 0.2.20",
+"ggplot2 3.3.3",
+"fOptions 3042.86" ,
+"rbcb 0.1.6",
+"bizdays 1.0.6",
+"qrmtools 0.0-10",
+"rugarch 1.4-1" ,
+"combinat 0.0-8",
+"nvmix 0.0-3" 
+"fBasics 3042.89.1" ,
+"plyr 1.8.4" ,
+"PerformanceAnalytics 2.0.4" ,
+"knitr 1.23",
+"kableExtra 1.3.4",
+"gridExtra 2.3",
+"grid 3.6.1",
+"lattice 0.20-38",
+"ggalt 0.4.0",
+"ggrepel 0.9.1",
+"dplyr 0.8.3",
+"timeSeries 3042.102" ,
+"MASS 7.3-51.4",
+"reshape2 1.4.3"
