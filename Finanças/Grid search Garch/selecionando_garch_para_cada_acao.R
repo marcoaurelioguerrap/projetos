@@ -2,17 +2,21 @@ library(combinat)
 library(rugarch)
 # Script para achar melhor garch
 
+# carrega as acoes
 
-setwd('C:/Marco/Dados/Bolsa/wishlist/Outputs/Selecao_garch_0.02v')
+preco.acoes.nivel <- readRDS("preco.acoes.nivel_preview.RData")
+
+retornos <- list
+# Calcula os log retornos de todas as acoes
+for (n.acao in names(preco.acoes.nivel)){
+  retornos[[n.acao]] <- returns_qrmtools(preco.acoes.nivel[[n.acao]]Preco_ajustado)
+}
 
 
 ##### lista dos parametros possiveis ######
 ##### generalizado para o zoo dataframe amostra.acoes ######
 
-
 # lista todos os processos arma e garch possiveis
-
-
 
 # teste com armaOrder 1  6 11 16 21 26 31 36 e garch 1,1 ; 1,2 ; 2,1 ; 2,2
 
@@ -44,37 +48,43 @@ distribution.models <- distribution.models[1] # dist_mod
 
 
 
-# numero de simulaçoes
+# numero de simulaÃ§oes
 
 num_sim <- nrow(armaOrders)*nrow(garchOrders)*length(whichmodels)*length(distribution.models)*length(include_means)
 
 # salva os dados de todas as acoes
 dados_modelos_acoes = list()
 
-melhores_modelos_por_acao <- matrix(ncol = ncol(amostra.acoes), nrow = num_sim )
+# cÃ³digo antigo
+# melhores_modelos_por_acao <- matrix(ncol = ncol(amostra.acoes), nrow = num_sim )
+# colnames(melhores_modelos_por_acao) <- colnames(amostra.acoes)
 
-colnames(melhores_modelos_por_acao) <- colnames(amostra.acoes)
+melhores_modelos_por_acao <- matrix(ncol = length(names(retornos)), nrow = num_sim )
 
 
-for ( n.acao in 1:ncol(amostra.acoes)){
+colnames(melhores_modelos_por_acao) <- colnames(names(retornos))
+
+
+for ( n.acao in 1:length(names(retornos))){
   
   # salva em qual acao esta o loop
-  qual_acao <- colnames(amostra.acoes[,n.acao])
+  qual_acao <- names(retornos)[n.acao]
   
   counter <- 0
   
   
   # tira os NA
-  X <- amostra.acoes[complete.cases(amostra.acoes[,n.acao]),n.acao]
+  X <- retornos[[n.acao]]
+  X <- X[complete.cases(X),]
   
   
-  # salva os parametros e resultados dos modelos para comparação
+  # salva os parametros e resultados dos modelos para comparaÃ§Ã£o
   dados_modelos = list()
   
   
   ### loop que seleciona o melhor modelo
   
-  # TODO fazer o rolling window no X , não é só um for a mais no loop a baixo. tem q ver em cada loop qual é o modelo q acerta mais
+  # TODO fazer o rolling window no X , nÃ£o Ã© sÃ³ um for a mais no loop a baixo. tem q ver em cada loop qual Ã© o modelo q acerta mais
   
   for(inc_mean in include_means){
     for(dist_mod in distribution.models){
@@ -154,7 +164,7 @@ for ( n.acao in 1:ncol(amostra.acoes)){
 }
 
 
-# nomea a lista dos dados_modelos_acoes . importante para chamar quando for rodar as simulações
+# nomea a lista dos dados_modelos_acoes . importante para chamar quando for rodar as simulaÃ§Ãµes
 names(dados_modelos_acoes) <- colnames(amostra.acoes)
 
 # salva no pc os dados dos modelos
@@ -200,7 +210,7 @@ forc.teste <- ugarchforecast(fit.teste, n.ahead = n , n.roll = 500)
 
 # end_time - start_time
 
-#### calculando o mse, mae e dac para comparar as simulaçoes ####
+#### calculando o mse, mae e dac para comparar as simulaÃ§oes ####
 
 # TODO: generalizar para todos os rolling windows... 
 # TODO: colocar isso no loop que procura o melhor modelo
@@ -216,7 +226,7 @@ MAE <- mean( abs(X[(data_usada+1):(data_usada+n),] - fitted(forc.teste)[,'2020-0
 DAC <- DACTest(fitted(forc.teste)[,'2020-02-03'] ,X[(data_usada+1):(data_usada+n),])$DirAcc
 
 
-#@@@@@@@@@@@@ TODO: até essa parte nao fica aqui, isso vai para o varios_garch.R ( novo selecionando_garch.R ) @@@@@@@@@@@@@
+#@@@@@@@@@@@@ TODO: atÃ© essa parte nao fica aqui, isso vai para o varios_garch.R ( novo selecionando_garch.R ) @@@@@@@@@@@@@
 
 
 #### exemplo para pegar os dados de cada acao
