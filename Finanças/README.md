@@ -36,7 +36,7 @@
 
 # Resumo
 
-A ídeia para esse projeto era de criar uma ferramenta onde eu pudesse testar estratégias de ações e opções na bolsa de valores. Na primeira etapa dele ( 
+A ídeia para esse projeto era de criar uma ferramenta onde eu pudesse testar estratégias de ações e opções na bolsa de valores. Na primeira etapa dele ( [1) Leitura dos dados disponibilizados pela B3](#1-leitura-dos-dados-disponibilizados-pela-b3) e [2) Formatação dos dados para uso](#2-formatação-dos-dados-para-uso)
 
 
 Para isso utilizo dados disponibilizados pela B3, um dos desafios desse trabalho foi o tratamento dos preços dos ativos, já que dividendos e desdobramentos alteram o valor de uma ação.
