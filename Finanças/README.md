@@ -38,11 +38,11 @@
 
 A ídeia para esse projeto era de criar uma ferramenta onde eu pudesse testar estratégias de ações e opções na bolsa de valores. Não considero o projeto terminado, ainda quero fazer mudanças - adcionar mais ações, melhorar os modelos de precificação de opção, criar um teste do tipo alpha lens para os sinais gerados por cada estratégia, gerar mais estratégias, usar um GARCH multivariado, e criar uma etapa de simulações de cenário. Abaixo descrevo o que foi feito em cada etapa.
 
-( [1) Leitura dos dados disponibilizados pela B3](.//Lendo%20Arquivos%20da%20B3/) A primeira etapa dele é a coleta de dados  . Os dados são baixados diretamente do site da B3, onde para cada ano tem um arquivo com todas as operações cadastradas na bolsa de valores. No código [compila_dados_arquivos_B3.R](Lendo%20Arquivos%20da%20B3/compila_dados_arquivos_B3.R) eu defino algumas empresas do índice bovespa que negociam opções para separar os dados de ações e opções negociados por dia.
+[1) Leitura dos dados disponibilizados pela B3](.//Lendo%20Arquivos%20da%20B3/): A primeira etapa dele é a coleta de dados  . Os dados são baixados diretamente do site da B3, onde para cada ano tem um arquivo com todas as operações cadastradas na bolsa de valores. No código [compila_dados_arquivos_B3.R](Lendo%20Arquivos%20da%20B3/compila_dados_arquivos_B3.R) eu defino algumas empresas do índice bovespa que negociam opções para separar os dados de ações e opções negociados por dia.
 
-[2) Formatação dos dados para uso](.//Formatando%20os%20Dados/) ) Uma vez coletados os dados eu uso o arquivo ['carrega_acaoes_opcoes.R'](carrega_acaoes_opcoes.R) e ['le div e split.R'](le%20div%20e%20split.R) para formatar e calcular o preço ajustado de uma ação. Embora separei diversas ações, no presente estado do trabalho apenas utilizei os preços das ações e opções para PETR4. Pretendo adcionar as outras ações.
+[2) Formatação dos dados para uso](.//Formatando%20os%20Dados/):  Uma vez coletados os dados eu uso o arquivo ['carrega_acaoes_opcoes.R'](carrega_acaoes_opcoes.R) e ['le div e split.R'](le%20div%20e%20split.R) para formatar e calcular o preço ajustado de uma ação. Embora separei diversas ações, no presente estado do trabalho apenas utilizei os preços das ações e opções para PETR4. Pretendo adcionar as outras ações.
 
-e 
+[3) Grid search para o GARCH utilizado](.//Grid%20search%20Garch/): Nessa etapa eu faço um grid search para encontrar os melhores modelos GARCH para os preços das ações.
 
 
 
