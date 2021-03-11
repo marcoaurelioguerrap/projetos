@@ -45,7 +45,7 @@ A ídeia para esse projeto era de criar uma ferramenta onde eu pudesse testar es
 [3) Grid search para o GARCH utilizado](.//Grid%20search%20Garch/): Nessa etapa eu faço um grid search para encontrar os melhores modelos GARCH para os preços das ações. O script ['selecionando_garch_para_cada_acao.R'](Grid%20search%20Garch/selecionando_garch_para_cada_acao.R) testa diversos modelos variando: 
 > a ordem dos parametros arma(n,n) | n = {1,2,...,6} ;  a ordem dos parametros GARCH(n,n) | n = {1,2,...,6} ; distribuição do modelo , student (std), student com viés (sstd), distribuição generalizada de erros (ged), distribuição generalizada de erros com viés (sged) ; inclusão de média )
 
-nos arquivos 'dados_modelos_acoes_\*_\*.RData da pasta [Finanças/Grid search Garch/](./Finanças/Grid%20search%20Garch) têm os resultados encontrados para 13 ações. Embora eu utilize o GARCH como um modelo de previsão rolling windows no trabalho, o grid search foi feito sob toda a amostra.
+nos arquivos 'dados_modelos_acoes_\*_\*.RData da pasta [Finanças/Grid search Garch/](.//Grid%20search%20Garch/) têm os resultados encontrados para 13 ações. Embora eu utilize o GARCH como um modelo de previsão rolling windows no trabalho, o grid search foi feito sob toda a amostra.
 
 
 
