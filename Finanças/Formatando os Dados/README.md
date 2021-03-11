@@ -2,7 +2,7 @@
 
 **Info**
 
-['carrega_acoes_opcoes.R'](carrega_acoes_opcoes.R) - Usado para ler os arquivos gerados pelo ['compila_dados_arquivos_B3.R'](./Lendo%20Arquivos%20da%20B3/compila_dados_arquivos_B3.R)  e formatar os dados : 
+['carrega_acaoes_opcoes.R'](carrega_acaoes_opcoes.R) - Usado para ler os arquivos gerados pelo ['compila_dados_arquivos_B3.R'](./Lendo%20Arquivos%20da%20B3/compila_dados_arquivos_B3.R)  e formatar os dados : 
 >"lista_das_acoes.RData" , "lista_dos_CALL.RData", "lista_dos_PUT.RData"  
 
 ['le div e split.R'](le%20div%20e%20split.R) - Pega os dados ['dados_split_div.txt'](.//dados%20de%20desdobramentos%20e%20dividendos/dados_split_div.txt) que contém as informações de desdobramentos e dividendos de algumas ações selecionadas ( por volume )
