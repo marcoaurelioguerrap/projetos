@@ -36,7 +36,7 @@
 
 # Resumo
 
-A ídeia para esse projeto era de criar uma ferramenta onde eu pudesse testar estratégias de ações e opções na bolsa de valores. Não considero o projeto terminado, ainda quero fazer mudanças - adcionar mais ações, melhorar os modelos de precificação de opção, criar um teste no estilo alpha lens para os sinais gerados por cada estratégia, gerar mais estratégias, melhorar o Grid Search do GARCH, usar um GARCH multivariado, e criar uma etapa de simulações de cenário. Abaixo descrevo o que foi feito em cada etapa.
+A ídeia para esse projeto era de criar uma ferramenta onde eu pudesse testar estratégias de ações e opções na bolsa de valores. Não considero o projeto terminado, ainda quero fazer mudanças - adcionar mais ações, melhorar os modelos de precificação de opção, criar um teste no estilo alpha lens para os sinais gerados por cada estratégia, gerar mais estratégias, melhorar o Grid Search do GARCH, usar um GARCH multivariado, e criar uma etapa de simulações de cenários. Abaixo descrevo o que foi feito em cada etapa.
 
 [1) Leitura dos dados disponibilizados pela B3](.//Lendo%20Arquivos%20da%20B3/): A primeira etapa dele é a coleta de dados  . Os dados são baixados diretamente do site da B3, onde para cada ano tem um arquivo com todas as operações cadastradas na bolsa de valores. No código [compila_dados_arquivos_B3.R](Lendo%20Arquivos%20da%20B3/compila_dados_arquivos_B3.R) eu defino algumas empresas do índice bovespa que negociam opções para separar os dados de ações e opções negociados por dia.
 
