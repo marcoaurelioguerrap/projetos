@@ -106,8 +106,8 @@ Pelos resultados dos testes fica claro que os modelos condicionais possuem as ca
 
 | |
 |:-------------------------:|
-|<img src=".//imagens/violacoes_var/violacoes_var_95Papel_base.png">|
-|<img src=".//imagens/violacoes_var/violacoes_var_99Papel_base.png">|
+|<img src=".//imagens/testes_ES/violacoes_ES_95Papel_base.png">|
+|<img src=".//imagens/testes_ES/violacoes_ES_95Papel_base.png">|
 
 
 
